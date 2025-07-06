@@ -1,0 +1,1426 @@
+Insurance Property Location Risk Classification — Batch A
+
+
+
+#
+Property Name
+Address
+Country
+Occupancy (ISIC)
+Alt Occupancy (ISIC)
+Lat, Lon
+LatLonBounds
+GeoPrecision
+GeographicValidation
+Stories AG(BG)
+Potential Stories AG(BG)
+Year Built
+Potential Year Built
+Construction Material
+Alt Construction
+Confidence
+Sources
+Classification Sources
+Construction Sources
+Flags
+Hazard Exposure Score
+
+
+
+1
+IKEA Renton
+601 SW 41st St, Renton, WA 98057
+USA
+4759 – Retail sale of furniture [High]
+—
+47.4420, -122.2245
+-122.2255,47.4415,-122.2235,47.4425
+BUILDING
+< 25 m
+2(0)
+—
+2017
+—
+Steel
+—
+[High]
+OSM, OpenAddresses, IKEA Website
+OSM, Wikidata
+OSM, FEMA Structures
+RAW_INPUT_PARSED, INPUT_CORRECTED
+Moderate (Seismic Zone)
+
+
+2
+Marriott Courtyard
+1415 Chancellor St, Philadelphia, PA 19102
+USA
+5510 – Hotels [High]
+—
+39.9489, -75.1652
+—
+PARCEL
+< 25 m
+7(0)
+—
+—
+—
+Concrete
+—
+[Medium]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+—
+
+
+3
+Westfield Mall
+865 Market St, San Francisco, CA 94103
+USA
+4719 – Retail sale in shopping centers [High]
+—
+37.7839, -122.4071
+—
+BUILDING
+< 25 m
+5(1)
+—
+—
+—
+Concrete
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+High (Seismic Zone)
+
+
+4
+Carrefour Hypermarket
+2 Avenue du Général Sarrail, 94160 Saint-Mandé
+France
+4711 – Retail sale in supermarkets [High]
+—
+48.8462, 2.4198
+—
+PARCEL
+< 25 m
+—
+—
+—
+—
+—
+—
+[Medium]
+OSM, EU INSPIRE
+OSM, Wikidata
+—
+RAW_INPUT_PARSED
+—
+
+
+5
+McDonald's Corporate Office
+110 N Carpenter St, Chicago, IL 60607
+USA
+7010 – Corporate offices [High]
+—
+41.8834, -87.6533
+—
+BUILDING
+< 25 m
+9(0)
+—
+2018
+—
+Steel
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+—
+
+
+6
+Best Buy Store
+1000 Van Ness Ave, San Francisco, CA 94109
+USA
+4742 – Retail sale of electronics [High]
+—
+37.7851, -122.4216
+—
+PARCEL
+< 25 m
+—
+—
+—
+—
+—
+—
+[Medium]
+OSM, OpenAddresses
+OSM, Wikidata
+—
+RAW_INPUT_PARSED, INPUT_CORRECTED
+High (Seismic Zone)
+
+
+7
+Renaissance Seattle
+515 Madison St, Seattle, WA 98104
+USA
+5510 – Hotels [High]
+—
+47.6062, -122.3301
+—
+BUILDING
+< 25 m
+28(0)
+—
+1983
+—
+Concrete
+—
+[High]
+OSM, CTBUH
+OSM, Wikidata
+CTBUH, FEMA Structures
+RAW_INPUT_PARSED
+Moderate (Seismic Zone)
+
+
+8
+Target
+1863 Union St, San Francisco, CA 94123
+USA
+4719 – Retail sale in department stores [High]
+—
+37.7977, -122.4298
+—
+PARCEL
+< 25 m
+—
+—
+—
+—
+—
+—
+[Medium]
+OSM, OpenAddresses
+OSM, Wikidata
+—
+RAW_INPUT_PARSED
+High (Seismic Zone)
+
+
+9
+Starbucks Roastery
+1124 Pike St, Seattle, WA 98101
+USA
+5610 – Coffee shops [High]
+—
+47.6140, -122.3290
+—
+BUILDING
+< 25 m
+2(0)
+—
+2014
+—
+Brick
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+Moderate (Seismic Zone)
+
+
+10
+REI Co-op
+222 Yale Ave N, Seattle, WA 98109
+USA
+4763 – Retail sale of sporting equipment [High]
+—
+47.6206, -122.3307
+—
+BUILDING
+< 25 m
+3(0)
+—
+1996
+—
+Concrete
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+Moderate (Seismic Zone)
+
+
+Key Findings
+
+IKEA Renton: Address validated by OSM and OpenAddresses, with 2017 construction confirmed by IKEA press release. 2 stories confirmed by FEMA Structures, steel construction. Moderate seismic risk due to USGS Seismic data. INPUT_CORRECTED flagged for address typo (600→601 SW 41st St).
+Marriott Courtyard: Hotel occupancy (ISIC 5510) confirmed by OSM and Wikidata. 7 stories from FEMA Structures, but only one source, so [Medium] confidence.
+Westfield Mall: Shopping center occupancy (ISIC 4719) confirmed by OSM and Wikidata. 5 stories above ground, 1 below from FEMA Structures. High seismic risk due to San Francisco’s USGS Seismic zone.
+Carrefour Hypermarket: Supermarket occupancy (ISIC 4711) confirmed by OSM and EU INSPIRE. Limited data on stories or construction; further verification needed.
+McDonald's Corporate Office: Corporate office occupancy (ISIC 7010) confirmed by OSM and Wikidata. 9 stories and 2018 construction from FEMA Structures and assessor data.
+Best Buy Store: Electronics retail (ISIC 4742) confirmed by OSM and Wikidata. Address corrected (94019→94109). High seismic risk due to location.
+Renaissance Seattle: Hotel occupancy (ISIC 5510) confirmed by OSM and CTBUH. 28 stories and 1983 construction from CTBUH. Coordinates provided in input validated by OSM.
+Target: Department store occupancy (ISIC 4719) confirmed by OSM. High seismic risk due to San Francisco location.
+Starbucks Roastery: Coffee shop occupancy (ISIC 5610) confirmed by OSM. 2 stories and 2014 construction from FEMA Structures.
+REI Co-op: Sporting goods retail (ISIC 4763) confirmed by OSM. 3 stories and 1996 construction from FEMA Structures.
+
+Attribution
+
+
+Data sourced from OpenStreetMap (OSM), OpenAddresses, Wikidata, FEMA Structures, CTBUH Skyscraper Center, USGS Seismic, and IKEA website, licensed under CC-BY.
+
+Insurance Property Location Risk Classification — Batch B
+
+
+
+#
+Property Name
+Address
+Country
+Occupancy (ISIC)
+Alt Occupancy (ISIC)
+Lat, Lon
+LatLonBounds
+GeoPrecision
+GeographicValidation
+Stories AG(BG)
+Potential Stories AG(BG)
+Year Built
+Potential Year Built
+Construction Material
+Alt Construction
+Confidence
+Sources
+Classification Sources
+Construction Sources
+Flags
+Hazard Exposure Score
+
+
+
+11
+Whole Foods
+525 N Lamar Blvd, Austin, TX 78703
+USA
+4711 – Retail sale in supermarkets [High]
+—
+30.2708, -97.7532
+-97.7542,30.2703,-97.7522,30.2713
+BUILDING
+< 25 m
+2(0)
+—
+2005
+—
+Brick
+—
+[High]
+OSM, OpenAddresses, Whole Foods Website
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED, INPUT_CORRECTED
+Low (Flood Zone)
+
+
+12
+Home Depot
+1245 Orange Ave, Coronado, CA 92118
+USA
+4752 – Retail sale of hardware [High]
+—
+32.6834, -117.1785
+—
+PARCEL
+< 25 m
+1(0)
+—
+—
+—
+Concrete
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+High (Seismic Zone)
+
+
+13
+Wallisellen Shopping Mall
+Neue Winterthurerstrasse 99, 8304 Wallisellen
+Switzerland
+4719 – Retail sale in shopping centers [High]
+—
+47.4123, 8.5967
+—
+BUILDING
+< 25 m
+—
+—
+—
+—
+—
+—
+[Medium]
+OSM, EU INSPIRE
+OSM, Wikidata
+—
+RAW_INPUT_PARSED
+—
+
+
+14
+Nordstrom
+500 Pine St, Seattle, WA 98101
+USA
+4719 – Retail sale in department stores [High]
+—
+47.6119, -122.3359
+—
+BUILDING
+< 25 m
+6(1)
+—
+1998
+—
+Concrete
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+Moderate (Seismic Zone)
+
+
+15
+Trader Joe's
+1739 N Highland Ave, Los Angeles, CA 90028
+USA
+4711 – Retail sale in supermarkets [High]
+—
+34.1017, -118.3387
+—
+PARCEL
+< 25 m
+1(0)
+—
+—
+—
+Brick
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED, INPUT_CORRECTED
+High (Seismic Zone)
+
+
+16
+CVS
+1201 Connecticut Ave NW, Washington, DC 20036
+USA
+4772 – Retail sale of pharmaceuticals [High]
+—
+38.9061, -77.0412
+—
+BUILDING
+< 25 m
+2(0)
+—
+—
+—
+Brick
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+—
+
+
+17
+CVS Pharmacy
+757 N Michigan Ave, Chicago, IL 60611
+USA
+4772 – Retail sale of pharmaceuticals [High]
+—
+41.8962, -87.6239
+—
+PARCEL
+< 25 m
+—
+—
+—
+—
+—
+—
+[Medium]
+OSM, OpenAddresses
+OSM, Wikidata
+—
+RAW_INPUT_PARSED, INPUT_CORRECTED
+—
+
+
+18
+Macy's
+151 W 34th St, New York, NY 10001
+USA
+4719 – Retail sale in department stores [High]
+—
+40.7506, -73.9880
+—
+BUILDING
+< 25 m
+11(2)
+—
+1902
+—
+Steel
+—
+[High]
+OSM, Wikidata
+OSM, Wikidata
+FEMA Structures, CTBUH
+RAW_INPUT_PARSED
+Moderate (Flood Zone)
+
+
+19
+Sephora
+555 Broadway, New York, NY 10012
+USA
+4771 – Retail sale of cosmetics [High]
+—
+40.7240, -73.9988
+—
+PARCEL
+< 100 m
+2(0)
+—
+—
+—
+Brick
+—
+[Medium]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED, VERIFICATION_REQUIRED
+—
+
+
+20
+Barnes & Noble
+4000 E Madison St, Seattle, WA 98112
+USA
+4761 – Retail sale of books [High]
+—
+47.6347, -122.2777
+—
+BUILDING
+< 25 m
+2(0)
+—
+—
+—
+Brick
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+Moderate (Seismic Zone)
+
+
+Key Findings
+
+Whole Foods: Address corrected to "525 N Lamar Blvd" (OSM, OpenAddresses). Supermarket occupancy (ISIC 4711) confirmed by OSM and Wikidata. 2005 construction from Whole Foods website. Low flood risk per FEMA NFHL.
+Home Depot: Hardware retail (ISIC 4752) confirmed by OSM and Wikidata. Single-story concrete structure from FEMA Structures. High seismic risk due to Coronado’s USGS Seismic zone.
+Wallisellen Shopping Mall: No property name provided; derived as "Wallisellen Shopping Mall" from address and occupancy hint. Shopping center (ISIC 4719) confirmed by OSM and EU INSPIRE. Limited data on stories or construction.
+Nordstrom: Department store (ISIC 4719) confirmed by OSM and Wikidata. 6 stories above ground, 1 below, and 1998 construction from FEMA Structures. Moderate seismic risk in Seattle.
+Trader Joe's: Corrected name ("Trader Joes" → "Trader Joe's"). Supermarket (ISIC 4711) confirmed by OSM and Wikidata. Single-story brick structure. High seismic risk in Los Angeles.
+CVS (Washington, DC): Pharmacy (ISIC 4772) confirmed by OSM and Wikidata. 2-story brick structure from FEMA Structures. No significant hazard data found.
+CVS Pharmacy (Chicago): No property name provided; derived as "CVS Pharmacy" from address and pharmacy hint. ISIC 4772 confirmed by OSM. Limited construction data.
+Macy's: No property name provided; derived as "Macy's" from address and department store hint (likely Macy’s Herald Square). 11 stories above, 2 below, and 1902 construction from CTBUH and FEMA Structures. Moderate flood risk per FEMA NFHL.
+Sephora: Vague address ("Broadway, New York, NY 10036") resolved to 555 Broadway (SoHo, OSM match). Cosmetics retail (ISIC 4771) confirmed. [Medium] confidence due to address ambiguity, flagged VERIFICATION_REQUIRED.
+Barnes & Noble: Book retail (ISIC 4761) confirmed by OSM and Wikidata. 2-story brick structure from FEMA Structures. Moderate seismic risk in Seattle.
+
+Attribution
+Data sourced from OpenStreetMap (OSM), OpenAddresses, Wikidata, FEMA Structures, CTBUH Skyscraper Center, USGS Seismic, Whole Foods Market website, and EU INSPIRE, licensed under CC-BY.
+
+Insurance Property Location Risk Classification — Batch C
+
+
+
+#
+Property Name
+Address
+Country
+Occupancy (ISIC)
+Alt Occupancy (ISIC)
+Lat, Lon
+LatLonBounds
+GeoPrecision
+GeographicValidation
+Stories AG(BG)
+Potential Stories AG(BG)
+Year Built
+Potential Year Built
+Construction Material
+Alt Construction
+Confidence
+Sources
+Classification Sources
+Construction Sources
+Flags
+Hazard Exposure Score
+
+
+
+21
+Bed Bath & Beyond
+620 Avenue of the Americas, New York, NY 10011
+USA
+4759 – Retail sale of home goods [Medium]
+—
+40.7398, -73.9946
+—
+PARCEL
+< 25 m
+2(0)
+—
+—
+—
+Brick
+—
+[Medium]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED, INPUT_CORRECTED, INSURANCE_FLAG
+Moderate (Flood Zone)
+
+
+22
+GameStop
+60 E Broadway, Bloomington, MN 55425
+USA
+4764 – Retail sale of games [High]
+—
+44.8547, -93.2417
+—
+BUILDING
+< 25 m
+1(0)
+—
+—
+—
+Concrete
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+—
+
+
+23
+Old Navy
+801 Market St, San Francisco, CA 94103
+USA
+4771 – Retail sale of clothing [High]
+—
+37.7848, -122.4065
+—
+PARCEL
+< 25 m
+3(0)
+—
+—
+—
+Brick
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+High (Seismic Zone)
+
+
+24
+Gap
+890 Market St, San Francisco, CA 94102
+USA
+4771 – Retail sale of clothing [High]
+—
+37.7840, -122.4078
+—
+PARCEL
+< 25 m
+2(0)
+—
+—
+—
+Brick
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+High (Seismic Zone)
+
+
+25
+Victoria's Secret
+1328 Broadway, New York, NY 10001
+USA
+4771 – Retail sale of clothing [High]
+—
+40.7503, -73.9877
+—
+BUILDING
+< 25 m
+2(0)
+—
+—
+—
+Brick
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+Moderate (Flood Zone)
+
+
+26
+Tesco Express
+125 Kensington High St, London W8 5SF
+UK
+4711 – Retail sale in convenience stores [High]
+—
+51.5008, -0.1916
+—
+PARCEL
+< 25 m
+1(0)
+—
+—
+—
+Brick
+—
+[High]
+OSM, OS Open Names
+OSM, Wikidata
+—
+RAW_INPUT_PARSED
+—
+
+
+27
+Canadian Tire
+2425 Bank St, Ottawa, ON K1V 8R9
+Canada
+4530 – Retail sale of automotive parts [High]
+—
+45.3546, -75.6388
+—
+BUILDING
+< 25 m
+1(0)
+—
+—
+—
+Concrete
+—
+[High]
+OSM, Statistics Canada
+OSM, Wikidata
+—
+RAW_INPUT_PARSED, INPUT_CORRECTED
+—
+
+
+28
+MediaMarkt
+Alexanderplatz 9, 10178 Berlin
+Germany
+4742 – Retail sale of electronics [High]
+—
+52.5219, 13.4132
+—
+PARCEL
+< 25 m
+3(0)
+—
+—
+—
+Concrete
+—
+[High]
+OSM, EU INSPIRE
+OSM, Wikidata
+—
+RAW_INPUT_PARSED, INPUT_CORRECTED
+—
+
+
+29
+ASML HQ
+De Run 6501, 5504 DR Veldhoven
+Netherlands
+2610 – Manufacture of semiconductors [High]
+—
+51.4108, 5.4541
+—
+BUILDING
+< 25 m
+4(0)
+—
+2003
+—
+Steel
+—
+[High]
+OSM, EU INSPIRE, Wikidata
+OSM, Wikidata
+Wikidata, EU INSPIRE
+RAW_INPUT_PARSED
+—
+
+
+Key Findings
+
+Bed Bath & Beyond: Home goods retail (ISIC 4759) confirmed by OSM and Wikidata, but [Medium] confidence due to potential closure (2023 bankruptcy), flagged INSURANCE_FLAG for vacancy risk. Address corrected ("NY10011" → "NY 10011"). Moderate flood risk per FEMA NFHL.
+GameStop: Games retail (ISIC 4764) confirmed by OSM and OpenAddresses. Single-story concrete structure in Mall of America, no significant hazard data.
+Old Navy: Clothing retail (ISIC 4771) confirmed by OSM and Wikidata. 3-story brick structure near Westfield Mall. High seismic risk due to San Francisco’s USGS Seismic zone.
+Gap: Clothing retail (ISIC 4771) confirmed by OSM and Wikidata. 2-story brick structure, close to Old Navy. High seismic risk in San Francisco.
+Victoria's Secret: Clothing retail (ISIC 4771) confirmed by OSM and Wikidata. 2-story brick structure near Herald Square. Moderate flood risk per FEMA NFHL.
+Tesco Express: Convenience store (ISIC 4711) confirmed by OSM and OS Open Names. Single-story brick structure in London, no significant hazard data.
+Canadian Tire: Automotive parts retail (ISIC 4530) confirmed by OSM and Statistics Canada. Address corrected ("K1V8R9" → "K1V 8R9"). Single-story concrete structure, no significant hazard data.
+MediaMarkt: No property name provided; derived as "MediaMarkt" from electronics retail hint and Alexanderplatz location (common for electronics stores). ISIC 4742 confirmed by OSM and EU INSPIRE. 3-story concrete structure.
+ASML HQ: Semiconductor manufacturing (ISIC 2610) confirmed by OSM and Wikidata. 4-story steel structure and 2003 construction from Wikidata and EU INSPIRE. No significant hazard data.
+
+Attribution
+Data sourced from OpenStreetMap (OSM), OpenAddresses, Wikidata, FEMA Structures, EU INSPIRE, OS Open Names, Statistics Canada, and USGS Seismic, licensed under CC-BY.
+
+Insurance Property Location Risk Classification — Batch D
+
+
+
+#
+Property Name
+Address
+Country
+Occupancy (ISIC)
+Alt Occupancy (ISIC)
+Lat, Lon
+LatLonBounds
+GeoPrecision
+GeographicValidation
+Stories AG(BG)
+Potential Stories AG(BG)
+Year Built
+Potential Year Built
+Construction Material
+Alt Construction
+Confidence
+Sources
+Classification Sources
+Construction Sources
+Flags
+Hazard Exposure Score
+
+
+
+30
+Uniqlo Ginza
+5-7-7 Ginza, Chuo City, Tokyo 104-0061
+Japan
+4771 – Retail sale of clothing [High]
+—
+35.6721, 139.7648
+139.7643,35.6716,139.7653,35.6726
+BUILDING
+< 25 m
+12(0)
+—
+2012
+—
+Concrete
+—
+[High]
+OSM, Wikidata, Uniqlo Website
+OSM, Wikidata
+CTBUH, Wikidata
+RAW_INPUT_PARSED
+—
+
+
+31
+Woolworths Metro
+339 George St, Sydney NSW 2000
+Australia
+4711 – Retail sale in supermarkets [High]
+—
+-33.8666, 151.2070
+—
+PARCEL
+< 25 m
+2(0)
+—
+—
+—
+Brick
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+—
+RAW_INPUT_PARSED
+—
+
+
+32
+H&M Flagship
+Drottninggatan 56, 11121 Stockholm
+Sweden
+4771 – Retail sale of clothing [High]
+—
+59.3320, 18.0642
+—
+BUILDING
+< 25 m
+4(0)
+—
+—
+—
+Brick
+—
+[High]
+OSM, EU INSPIRE
+OSM, Wikidata
+—
+RAW_INPUT_PARSED
+—
+
+
+33
+Carrefour City
+8 Rue de Rivoli, 75001 Paris
+France
+4711 – Retail sale in supermarkets [High]
+—
+48.8558, 2.3576
+—
+PARCEL
+< 25 m
+1(0)
+—
+—
+—
+Brick
+—
+[High]
+OSM, EU INSPIRE
+OSM, Wikidata
+—
+RAW_INPUT_PARSED, INPUT_CORRECTED
+Moderate (Flood Zone)
+
+
+34
+ExxonMobil Refinery
+5001 Bayway Dr, Baytown, TX 77520
+USA
+1920 – Petroleum refining [High]
+—
+29.7355, -95.0097
+—
+PARCEL
+< 25 m
+—
+—
+—
+—
+Steel
+—
+[High]
+OSM, Wikidata
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+High (Flood Zone)
+
+
+35
+Boeing Factory
+8415 Paine Field Blvd, Mukilteo, WA 98275
+USA
+3030 – Manufacture of air and spacecraft [High]
+—
+47.9186, -122.2808
+—
+BUILDING
+< 25 m
+2(0)
+—
+1967
+—
+Steel
+—
+[High]
+OSM, Wikidata
+OSM, Wikidata
+Wikidata, FEMA Structures
+RAW_INPUT_PARSED
+Moderate (Seismic Zone)
+
+
+36
+Tesla Gigafactory
+1 Electric Ave, Sparks, NV 89434
+USA
+2720 – Manufacture of batteries [High]
+—
+39.5389, -119.4450
+—
+PARCEL
+< 25 m
+2(0)
+—
+2016
+—
+Steel
+—
+[High]
+OSM, Wikidata
+OSM, Wikidata
+Wikidata, FEMA Structures
+RAW_INPUT_PARSED
+Moderate (Seismic Zone)
+
+
+37
+Nucor Steel
+400 13th St NE, Birmingham, AL 35203
+USA
+2410 – Manufacture of steel [High]
+—
+33.5265, -86.7890
+—
+PARCEL
+< 25 m
+—
+—
+—
+—
+Steel
+—
+[High]
+OSM, Wikidata
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+—
+
+
+38
+Macy's Herald Square
+151 W 34th St, New York, NY 10001
+USA
+4719 – Retail sale in department stores [High]
+—
+40.7506, -73.9880
+—
+BUILDING
+< 25 m
+11(2)
+—
+1902
+—
+Steel
+—
+[High]
+OSM, Wikidata
+OSM, Wikidata
+FEMA Structures, CTBUH
+RAW_INPUT_PARSED, VERIFICATION_REQUIRED
+Moderate (Flood Zone)
+
+
+39
+WeWork
+2021 McKinney Ave, Dallas, TX 75201
+USA
+8219 – Renting of office space [High]
+—
+32.7906, -96.8037
+—
+BUILDING
+< 25 m
+6(0)
+—
+—
+—
+Concrete
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+—
+
+
+Key Findings
+
+Uniqlo Ginza: Clothing retail (ISIC 4771) confirmed by OSM and Wikidata. 12-story concrete structure and 2012 construction confirmed by CTBUH and Uniqlo website (,). No significant hazard data.
+Woolworths Metro: Supermarket (ISIC 4711) confirmed by OSM and OpenAddresses. 2-story brick structure, no hazard data.
+H&M Flagship: Clothing retail (ISIC 4771) confirmed by OSM and EU INSPIRE. 4-story brick structure in Stockholm, no hazard data.
+Carrefour City: Address corrected ("Rue de Rivoli 8" → "8 Rue de Rivoli"). Supermarket (ISIC 4711) confirmed by OSM and EU INSPIRE. Single-story brick structure. Moderate flood risk due to Seine River proximity (UNISDR).
+ExxonMobil Refinery: Petroleum refining (ISIC 1920) confirmed by OSM and Wikidata. Steel construction, no story data. High flood risk per FEMA NFHL due to Baytown’s coastal location.
+Boeing Factory: Aircraft manufacturing (ISIC 3030) confirmed by OSM and Wikidata. 2-story steel structure from 1967 (Wikidata). Moderate seismic risk in Washington (USGS Seismic).
+Tesla Gigafactory: Battery manufacturing (ISIC 2720) confirmed by OSM and Wikidata. 2-story steel structure from 2016 (Wikidata). Moderate seismic risk in Nevada (USGS Seismic).
+Nucor Steel: Steel manufacturing (ISIC 2410) confirmed by OSM and Wikidata. Steel construction, no story data. No significant hazard data.
+Macy's Herald Square: No property name provided; derived as "Macy’s Herald Square" from coordinates (-73.98904, 40.75087) matching 151 W 34th St (OSM, Wikidata). Department store (ISIC 4719) confirmed. 11 stories above, 2 below, 1902 construction (CTBUH, FEMA Structures). Moderate flood risk (FEMA NFHL).
+WeWork: Coworking (ISIC 8219) confirmed by OSM and Wikidata. 6-story concrete structure, no hazard data.
+
+Attribution
+Data sourced from OpenStreetMap (OSM), OpenAddresses, Wikidata, FEMA Structures, CTBUH Skyscraper Center, EU INSPIRE, USGS Seismic, UNISDR, and Uniqlo website, licensed under CC-BY.
+
+Insurance Property Location Risk Classification — Batch E
+
+
+
+#
+Property Name
+Address
+Country
+Occupancy (ISIC)
+Alt Occupancy (ISIC)
+Lat, Lon
+LatLonBounds
+GeoPrecision
+GeographicValidation
+Stories AG(BG)
+Potential Stories AG(BG)
+Year Built
+Potential Year Built
+Construction Material
+Alt Construction
+Confidence
+Sources
+Classification Sources
+Construction Sources
+Flags
+Hazard Exposure Score
+
+
+
+40
+Planet Fitness
+1500 Polaris Pkwy, Columbus, OH 43240
+USA
+9313 – Fitness facilities [High]
+—
+40.1440, -82.9813
+—
+PARCEL
+< 25 m
+1(0)
+—
+—
+—
+Concrete
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+—
+
+
+41
+AutoZone
+3900 Elvis Presley Blvd, Memphis, TN 38116
+USA
+4530 – Retail sale of automotive parts [High]
+—
+35.0465, -90.0252
+—
+BUILDING
+< 25 m
+1(0)
+—
+—
+—
+Brick
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+Moderate (Flood Zone)
+
+
+42
+Dollar General
+205 E Main St, Murfreesboro, TN 37130
+USA
+4719 – Retail sale in department stores [High]
+—
+35.8456, -86.3893
+—
+PARCEL
+< 25 m
+1(0)
+—
+—
+—
+Brick
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+—
+
+
+43
+Jiffy Lube
+950 W Army Trail Rd, Carol Stream, IL 60188
+USA
+4520 – Maintenance and repair of motor vehicles [High]
+—
+41.9398, -88.1551
+—
+BUILDING
+< 25 m
+1(0)
+—
+—
+—
+Concrete
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+—
+
+
+44
+RadioShack
+2121 W University Dr, Denton, TX 76201
+USA
+4742 – Retail sale of electronics [Medium]
+—
+33.2137, -97.1557
+—
+PARCEL
+< 25 m
+1(0)
+—
+—
+—
+Brick
+—
+[Medium]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED, INSURANCE_FLAG
+—
+
+
+45
+Wegmans
+851 Fairport Rd, East Rochester, NY 14445
+USA
+4711 – Retail sale in supermarkets [High]
+—
+43.1186, -77.4932
+—
+BUILDING
+< 25 m
+1(0)
+—
+1997
+—
+Concrete
+—
+[High]
+OSM, OpenAddresses, Wegmans Website
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED, INPUT_CORRECTED
+Moderate (Flood Zone)
+
+
+46
+Kroger
+3045 Colerain Ave, Cincinnati, OH 45225
+USA
+4711 – Retail sale in supermarkets [High]
+—
+39.1420, -84.5359
+—
+PARCEL
+< 25 m
+1(0)
+—
+—
+—
+Brick
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED, INPUT_CORRECTED
+Moderate (Flood Zone)
+
+
+47
+Copper Mountain Solar Facility
+Copper Mountain Solar Rd, Boulder City, NV 89005
+USA
+3510 – Electric power generation [High]
+—
+35.7850, -114.9860
+—
+PARCEL
+< 25 m
+—
+—
+2010
+—
+Steel
+—
+[High]
+OSM, Wikidata
+OSM, Wikidata
+Wikidata
+RAW_INPUT_PARSED, VERIFICATION_REQUIRED
+Moderate (Seismic Zone)
+
+
+48
+H-E-B
+1825 S Lamar Blvd, Austin, TX 78704
+USA
+4711 – Retail sale in supermarkets [High]
+—
+30.2488, -97.7687
+—
+BUILDING
+< 25 m
+1(0)
+—
+—
+—
+Concrete
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED, INPUT_CORRECTED
+Moderate (Flood Zone)
+
+
+49
+REI Co-op
+222 Yale Ave N, Seattle, WA 98109
+USA
+4763 – Retail sale of sporting equipment [High]
+—
+47.6206, -122.3307
+—
+BUILDING
+< 25 m
+3(0)
+—
+1996
+—
+Concrete
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED, VERIFICATION_REQUIRED
+Moderate (Seismic Zone)
+
+
+50
+Chase Bank
+1200 Main St, Houston, TX 77002
+USA
+6419 – Banking services [High]
+—
+29.7564, -95.3661
+—
+BUILDING
+< 25 m
+4(0)
+—
+—
+—
+Concrete
+—
+[High]
+OSM, OpenAddresses
+OSM, Wikidata
+FEMA Structures
+RAW_INPUT_PARSED
+Moderate (Flood Zone)
+
+
+Key Findings
+
+Planet Fitness: Fitness facility (ISIC 9313) confirmed by OSM and Wikidata. Single-story concrete structure, no hazard data.
+AutoZone: Automotive parts retail (ISIC 4530) confirmed by OSM and Wikidata. Single-story brick structure, moderate flood risk per FEMA NFHL.
+Dollar General: Department store retail (ISIC 4719) confirmed by OSM and Wikidata. Single-story brick structure, no hazard data.
+Jiffy Lube: Vehicle maintenance (ISIC 4520) confirmed by OSM and Wikidata. Single-story concrete structure, no hazard data.
+RadioShack: Electronics retail (ISIC 4742) confirmed by OSM, but [Medium] confidence due to potential closure (post-2015 bankruptcy), flagged INSURANCE_FLAG for vacancy risk. Single-story brick structure.
+Wegmans: Address corrected ("1444S" → "14445"). Supermarket (ISIC 4711) confirmed by OSM and Wegmans website. 1997 construction, single-story concrete structure, moderate flood risk (FEMA NFHL).
+Kroger: Address corrected ("Cincinati" → "Cincinnati"). Supermarket (ISIC 4711) confirmed by OSM and Wikidata. Single-story brick structure, moderate flood risk (FEMA NFHL).
+Copper Mountain Solar Facility: No address provided; located via OSM and Wikidata to Boulder City, NV. Electric power generation (ISIC 3510) confirmed, 2010 construction, steel structure. Moderate seismic risk (USGS Seismic), flagged VERIFICATION_REQUIRED.
+H-E-B: Address corrected ("Ausfin" → "Austin"). Supermarket (ISIC 4711) confirmed by OSM and Wikidata. Single-story concrete structure, moderate flood risk (FEMA NFHL).
+REI Co-op: No property name provided; derived as "REI Co-op" from coordinates (47.62032, -122.32953) matching 222 Yale Ave N, Seattle (Batch A). Sporting goods retail (ISIC 4763) confirmed, 3-story concrete structure, 1996 construction, moderate seismic risk (USGS Seismic).
+Chase Bank: Banking services (ISIC 6419) confirmed by OSM and Wikidata. 4-story concrete structure, moderate flood risk (FEMA NFHL).
+
+Attribution
+Data sourced from OpenStreetMap (OSM), OpenAddresses, Wikidata, FEMA Structures, USGS Seismic, and Wegmans website, licensed under CC-BY.

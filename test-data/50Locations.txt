@@ -1,0 +1,373 @@
+ 	Batch A
+	1. IKEA Renton | 600 SW 41st St, Renton, WA 98057 | furniture retail store
+	2. Marriott Courtyard | 1415 Chancellor St, Philadelphia, PA 19102 | business hotel
+	3. Westfield Mall | 865 Market St, San Francisco, CA 94103 | shopping center
+	4. Carrefour Hypermarket | 2 Avenue du Général Sarrail, 94160 Saint-Mandé, France | grocery store
+	5. McDonald's - Corporate Office | 110 N Carpenter St, Chicago, IL 60607 | –
+	6. Best Buy Store | 1000 Van Ness Ave, San Francisco, CA 94019 | electronics retail
+	7. Renaissance Seattle| 47.6062, -122.3301 |
+	8. Target | 1863 Union St, San Francisco | –
+	9. Starbucks Roastery | 1124 Pike St, Seattle, WA 98101 | –
+	10. REI Co-op | 222 Yale Ave N, Seattle, WA 98109 | retail + gym
+
+	 Batch B
+	11. Whole Foods | 525 N Lamar Austin, TX 78703 | grocery
+	12. Home Depot | 1245 Orange Ave, Coronado, CA 92118 | –
+	13. – |Neue Winterthurerstrasse 99, 8304 Wallisellen | Shopping mall
+	14. Nordstrom | 500 Pine St, Seattle, WA 98101 | department store
+	15. Trader Joes | 1739 N Highland Ave, Los Angeles, CA 90028 | specialty grocery
+	16. CVS | 1201 Connecticut Ave NW, Washington, DC 20036 | pharmacy
+	17. – | 757 N Michigan Ave, Chicago, IL 60611 | pharmacy
+	18. – | 151 W 34th St, New York, NY 10001 | department
+	19. Sephora | Broadway, New York, NY 10036 | cosmetics
+	20. Barnes & Noble | 4000 E Madison St, Seattle, WA 98112 | –
+	
+	 Batch C
+	21. Bed Bath & Beyond | 620 Ave of the Americas, New York, NY10011 | home goods
+	22. GameStop | 60 E Broadway, Bloomington, MN 55425 | video games
+	23. Old Navy | 801 Market St, San Francisco, CA 94103 | clothing
+	24. Gap | 890 Market St, San Francisco, CA 94102 | –
+	25. Victoria's Secret | 1328 Broadway, New York, NY 10001 | –
+	26. Tesco Express | 125 Kensington High St, London W8 5SF | convenience
+	27. Canadian Tire | 2425 Bank St, Ottawa ON K1V8R9, Canada | auto retail
+	28. – | Alexanderpl. 9, 10178 Berlin, Germany | electronics
+	29. ASML HQ | De Run 6501, 5504 DR Veldhoven, NL | semiconductor mfg
+	
+	Batch D
+	30. Uniqlo Ginza | 5-7-7 Ginza, Chuo City, Tokyo 104-0061, Japan | fashion
+	31. Woolworths Metro | 339 George St, Sydney NSW 2000, Australia | grocery
+	32. H&M Flagship | Drottninggatan 56, 11121 Stockholm, Sweden | clothing
+	33. Carrefour City | Rue de Rivoli 8, 75001 Paris, France | –
+	34. ExxonMobil Refinery | 5001 Bayway Dr, Baytown TX 77520 | refining
+	35. Boeing Factory | 8415 Paine Field Blvd, Mukilteo WA 98275 | aircraft mfg
+	36. Tesla Gigafactory | 1 Electric Ave, Sparks NV 89434 | battery mfg
+	37. Nucor Steel | 400 13th St NE, Birmingham AL 35203 | steel mfg
+	38. Dept Store | –73.98904, 40.75087 | store
+	39. WeWork | 2021 McKinney Ave, Dallas TX 75201 | coworking
+	 
+	Batch E
+	40. Planet Fitness | 1500 Polaris Pkwy, Columbus OH 43240 | gym
+	41. AutoZone | 3900 Elvis Presley Blvd, Memphis TN 38116 | –
+	42. Dollar General | 205 E Main St, Murfreesboro TN 37130 | –
+	43. Jiffy Lube | 950 W Army Trail Rd, Carol Stream IL 60188 | –
+	44. RadioShack | 2121 W University Dr, Denton TX 76201 | –
+	45. Wegmans | 851 Fairport Rd, East Rochester NY 1444S | –
+	46. Kroger | 3045 Colerain Ave, Cincinati OH 45225 | –
+	47. Copper Mountain Solar Facility Nevada | – | –
+	48. H-E-B | 1825 S Lamar Blvd, Ausfin TX 78704 | grocery
+	49. Camping Store | 122.32953, 47.62032 | –
+	50. Chase Bank | 1200 Main St, Houston TX 77002 | banking
+
+
+# **CHALLENGE ANALYSIS & EXPECTED V7.7 BEHAVIOR:**
+
+# **TEST DATASET GEOGRAPHIC & CATEGORY DISTRIBUTION**
+
+## **📊 GEOGRAPHIC COVERAGE ANALYSIS**
+
+| **Region** | **Count** | **Locations** | **Expected V7.7 Performance** |
+|------------|-----------|---------------|-------------------------------|
+| **🇺🇸 United States** | 37 | 74% of dataset | **80-90% [High]/[Medium]** fields |
+| **🇨🇦 Canada** | 1 | Canadian Tire (Ottawa) | **75-85%** - Strong NA coverage |
+| **🇬🇧 United Kingdom** | 1 | Tesco Express (London) | **80-85%** - Strong EU coverage |
+| **🇫🇷 France** | 2 | Carrefour locations (Paris, Saint-Mandé) | **75-85%** - EU standards |
+| **🇩🇪 Germany** | 1 | Electronics store (Berlin) | **70-80%** - EU coverage |
+| **🇳🇱 Netherlands** | 1 | ASML HQ (Veldhoven) | **75-85%** - EU/industrial |
+| **🇸🇪 Sweden** | 1 | H&M Flagship (Stockholm) | **70-80%** - Nordic data |
+| **🇯🇵 Japan** | 1 | Uniqlo Ginza (Tokyo) | **40-60%** - APAC limitations |
+| **🇦🇺 Australia** | 1 | Woolworths Metro (Sydney) | **50-70%** - APAC moderate |
+| **🌍 Unspecified** | 4 | Coordinates-only, minimal data | **[Low]** - Inference only |
+
+---
+
+## **🏢 BUSINESS CATEGORY DISTRIBUTION**
+
+| **ISIC Category** | **Count** | **Test Locations** | **V7.7 Classification Challenge** |
+|-------------------|-----------|-------------------|-----------------------------------|
+| **Retail - General** | 15 | Target, Nordstrom, Gap, Old Navy, Victoria's Secret, Best Buy, GameStop, Barnes & Noble, Bed Bath & Beyond, Dollar General, H&M, Uniqlo | Standard brand recognition |
+| **Grocery/Food Retail** | 8 | Carrefour (2), Whole Foods, Trader Joe's, Wegmans, Kroger, H-E-B, Woolworths | Chain vs independent detection |
+| **Restaurants/Food Service** | 3 | McDonald's, Starbucks, Sephora Broadway | Corporate vs operational sites |
+| **Automotive** | 3 | Canadian Tire, AutoZone, Jiffy Lube | Service vs retail classification |
+| **Healthcare/Pharmacy** | 2 | CVS (2 locations) | Chain pharmacy identification |
+| **Industrial Manufacturing** | 4 | ExxonMobil, Boeing, Tesla, Nucor | "N/A - Industrial" construction |
+| **Technology/Electronics** | 3 | ASML, RadioShack, Berlin Electronics | High-tech vs consumer retail |
+| **Financial Services** | 1 | Chase Bank | Branch vs headquarters |
+| **Fitness/Recreation** | 2 | REI, Planet Fitness | Dual-occupancy potential |
+| **Hospitality** | 2 | Marriott, Renaissance Seattle | Fabrication vs coordinate tests |
+| **Office/Coworking** | 1 | WeWork | Mixed-use classification |
+| **Shopping Centers** | 2 | Westfield Mall, Wallisellen Mall | Multi-tenant facilities |
+| **Specialty Retail** | 4 | IKEA, Home Depot, Tesco Express, Camping Store | Big box vs convenience |
+
+---
+
+## **🎯 INPUT FORMAT COMPLEXITY TESTING**
+
+| **Input Type** | **Count** | **Examples** | **V7.7 Processing Mode** |
+|----------------|-----------|--------------|--------------------------|
+| **Complete Data** | 20 | `IKEA Renton \| 600 SW 41st St, Renton, WA 98057 \| furniture retail store` | Full 21-field analysis |
+| **Missing Occupancy** | 15 | `Barnes & Noble \| 4000 E Madison St, Seattle, WA 98112 \| –` | Brand inference required |
+| **Missing Business Name** | 3 | `– \| 757 N Michigan Ave, Chicago, IL 60611 \| pharmacy` | Reverse business lookup |
+| **Coordinates Only** | 3 | `47.6062, -122.3301` | 7-column candidate ranking |
+| **Minimal Data** | 4 | `Copper Mountain Solar Facility Nevada \| – \| –` | Geographic inference only |
+| **Format Errors** | 5 | OCR errors, merged ZIP codes, typos | Input correction required |
+
+---
+
+## **⚠️ ERROR & CHALLENGE TESTING**
+
+| **Challenge Type** | **Count** | **Specific Tests** | **Expected V7.7 Behavior** |
+|--------------------|-----------|-------------------|----------------------------|
+| **Address Errors** | 5 | IKEA (600→601), Best Buy ZIP, Wegmans ZIP OCR, H-E-B/Kroger city typos | Flag `INPUT_CORRECTED` |
+| **Fabricated Data** | 1 | **Marriott fake address** | Blank fields or `VERIFICATION_REQUIRED` |
+| **Coordinate Conflicts** | 2 | Renaissance Seattle, Tesla Gigafactory | Flag `COORDINATE_CONFLICT` |
+| **Business Closure** | 1 | RadioShack Denton | Flag `BUSINESS_CLOSED` |
+| **Dual Occupancy** | 3 | REI (retail+gym), WeWork, Westfield Mall | Alt Occupancy + flags |
+| **Industrial Facilities** | 4 | ExxonMobil, Boeing, Tesla, Nucor | Construction: "N/A - Industrial" |
+| **International Formatting** | 8 | UK postcodes, Canadian postal, German/French/Japanese addresses | Regional geocoding |
+| **Missing Street Numbers** | 2 | Sephora Broadway, Whole Foods Lamar | Address completion |
+
+---
+
+
+
+
+
+
+# **CHALLENGE ANALYSIS & EXPECTED V7.7 BEHAVIOR:**
+
+## **DIFFICULTY LEVEL 1: STANDARD (Complete Data)**
+1. **IKEA Renton** | 600 SW 41st St, Renton, WA 98057 | furniture retail store  
+   → **ADDRESS CORRECTION TEST**: Should detect correct address is "601 SW 41st St" → Flag `INPUT_CORRECTED`  
+   → ISIC 4759 furniture retail → Construction: Steel frame/concrete → Stories: 1-2 AG
+
+2. **Marriott Courtyard** | 1415 Chancellor St, Philadelphia, PA 19102 | business hotel  
+   → **🚨 CRITICAL FABRICATION TEST**: "1415 Chancellor St" DOES NOT EXIST  
+   → Should return BLANK fields or flag `VERIFICATION_REQUIRED` → Only Claude previously detected this
+The hotel at 1415 Chancellor St. (better known historically as The Bellevue-Stratford and today as The Bellevue Hotel – Hyatt’s Unbound Collection) has cycled through several flags over the decades—Fairmont, Westin, “Hotel Atop the Bellevue,” Park Hyatt, Hyatt at The Bellevue—but it has never operated under any Marriott brand or been called a “Marriott.” The full list of documented past names is:
+Bellevue-Stratford Hotel (original, 1904 – 1976)
+Fairmont Hotel (1979 – 1980)
+Bellevue Stratford (Western International/Westin, 1980 – 1983)
+The Westin Bellevue Stratford (1983 – 1986)
+Hotel Atop the Bellevue (Cunard, 1989 – 1993)
+The Bellevue (Interstate Hotels, 1994 – 1996)
+Park Hyatt Philadelphia at The Bellevue (1996 – 2010)
+Hyatt at The Bellevue (2010 – 2018)
+The Bellevue Hotel, Unbound Collection by Hyatt (2018 – present)
+None of those periods involved Marriott management or branding. The confusion likely stems from the nearby Philadelphia Marriott Downtown at 1201 Market St., which is a completely different property.
+
+3. **Westfield Mall** | 865 Market St, San Francisco, CA 94103 | shopping center  
+   → Multi-occupancy detection → ISIC 4719 + Alt Occupancy → Flag `DUAL_OCCUPANCY`  
+   → Construction: Steel/concrete → Stories: 3-4 AG → Hazard: Seismic zone
+
+4. **Carrefour Hypermarket** | 2 Avenue du Général Sarrail, 94160 Saint-Mandé, France | grocery store  
+   → International address parsing → ISIC 4711 hypermarket → European data sources  
+   → Construction: Steel frame → Year Built: 1990s-2000s inference
+
+## **DIFFICULTY LEVEL 2: MODERATE CHALLENGES**
+5. **McDonald's - Corporate Office** | 110 N Carpenter St, Chicago, IL 60607 | –  
+   → **OCCUPANCY DISAMBIGUATION**: Must distinguish corporate office vs restaurant  
+   → ISIC 7010 (headquarters) NOT 5610 (restaurants) → Office construction materials
+
+6. **Best Buy Store** | 1000 Van Ness Ave, San Francisco, CA 94019 | electronics retail  
+   → **ZIP CODE ERROR**: 94019 vs correct 94109 → Flag `INPUT_CORRECTED`  
+   → ISIC 4754 electronics → Big box construction → 1 AG typical
+
+7. **Renaissance Seattle** | 47.6062, -122.3301 |  
+   → **COORDINATES-ONLY INPUT**: Should trigger 7-column candidate ranking mode  
+   → **COORDINATE CONFLICT**: These coordinates point to Nordstrom, not Renaissance Hotel  
+   → Flag `COORDINATE_CONFLICT`
+
+8. **Target** | 1863 Union St, San Francisco | –  
+   → **MISSING ZIP**: Address completion required → ISIC 4719 department store  
+   → Construction: Steel frame → Stories: 2-3 AG typical
+
+9. **Starbucks Roastery** | 1124 Pike St, Seattle, WA 98101 | –  
+   → **MISSING OCCUPANCY**: OSM amenity=cafe → ISIC 5610 restaurants  
+   → Roastery = specialized facility → Potential construction: industrial/retail hybrid
+
+10. **REI Co-op** | 222 Yale Ave N, Seattle, WA 98109 | retail + gym  
+    → **DUAL OCCUPANCY**: ISIC 4764 (sporting goods) + Alt: 9313 (fitness) → Flag `DUAL_OCCUPANCY`
+
+## **DIFFICULTY LEVEL 3: GEOGRAPHIC & FORMAT CHALLENGES**
+11. **Whole Foods** | 525 N Lamar Austin, TX 78703 | grocery  
+    → **MISSING COMMA**: Address parsing → ISIC 4711 → Organic grocery premium construction
+
+12. **Home Depot** | 1245 Orange Ave, Coronado, CA 92118 | –  
+    → **MISSING OCCUPANCY**: Brand recognition → ISIC 4752 hardware store  
+    → Big box construction → 1 AG → Steel frame typical
+
+13. **–** | Neue Winterthurerstrasse 99, 8304 Wallisellen | Shopping mall  
+    → **MISSING PROPERTY NAME**: Swiss address → European geocoding  
+    → Property Name: "Glatt Shopping Center" (should infer) → Multi-level construction
+
+14. **Nordstrom** | 500 Pine St, Seattle, WA 98101 | department store  
+    → Standard processing → ISIC 4719 → Premium construction → Multi-story
+
+15. **Trader Joes** | 1739 N Highland Ave, Los Angeles, CA 90028 | specialty grocery  
+    → ISIC 4711 specialty grocery → Seismic hazard zone → 1 AG typical
+
+16. **CVS** | 1201 Connecticut Ave NW, Washington, DC 20036 | pharmacy  
+    → ISIC 4772 pharmacy → Urban construction → Ground floor retail
+
+17. **–** | 757 N Michigan Ave, Chicago, IL 60611 | pharmacy  
+    → **MISSING PROPERTY NAME**: Magnificent Mile location → Should identify as CVS/Walgreens  
+    → High-rise construction → Ground floor retail
+
+18. **–** | 151 W 34th St, New York, NY 10001 | department  
+    → **ANONYMOUS DEPARTMENT**: Empire State Building area → Should identify Macy's Herald Square  
+    → Historic construction → Multi-story → 1901 Year Built
+
+19. **Sephora** | Broadway, New York, NY 10036 | cosmetics  
+    → **MISSING STREET NUMBER**: Times Square area → Address completion required  
+    → ISIC 4775 cosmetics → Commercial construction
+
+20. **Barnes & Noble** | 4000 E Madison St, Seattle, WA 98112 | –  
+    → **NO OCCUPANCY**: Brand recognition → ISIC 4761 bookstore  
+    → Retail construction → 1-2 AG
+
+## **DIFFICULTY LEVEL 4: INTERNATIONAL CHALLENGES**
+21. **Bed Bath & Beyond** | 620 Ave of the Americas, New York, NY10011 | home goods  
+    → **MERGED ZIP**: NY10011 → 10011 → Flag `INPUT_CORRECTED`  
+    → ISIC 4759 home goods → Commercial construction
+
+22. **GameStop** | 60 E Broadway, Bloomington, MN 55425 | video games  
+    → ISIC 4764 video games → Strip mall construction → 1 AG
+
+23. **Old Navy** | 801 Market St, San Francisco, CA 94103 | clothing  
+    → ISIC 4771 clothing → Seismic zone → Commercial construction
+
+24. **Gap** | 890 Market St, San Francisco, CA 94102 | –  
+    → **NO OCCUPANCY**: Brand recognition → ISIC 4771 clothing  
+    → Urban retail → Seismic hazard
+
+25. **Victoria's Secret** | 1328 Broadway, New York, NY 10001 | –  
+    → **NO OCCUPANCY**: Brand recognition → ISIC 4771 clothing/lingerie  
+    → Commercial construction → Multi-story
+
+26. **Tesco Express** | 125 Kensington High St, London W8 5SF | convenience  
+    → **UK POSTCODE**: European processing → ISIC 4711 convenience  
+    → UK construction standards → Ground floor
+
+27. **Canadian Tire** | 2425 Bank St, Ottawa ON K1V8R9, Canada | auto retail  
+    → **CANADIAN POSTAL CODE**: K1V 8R9 format → ISIC 4530 auto parts  
+    → Big box construction → Cold climate materials
+
+28. **–** | Alexanderpl. 9, 10178 Berlin, Germany | electronics  
+    → **GERMAN ADDRESS**: Should identify MediaMarkt/Saturn → ISIC 4754  
+    → European construction → Historic district
+
+29. **ASML HQ** | De Run 6501, 5504 DR Veldhoven, NL | semiconductor mfg  
+    → **INDUSTRIAL FACILITY**: ISIC 2610 semiconductor → Construction: "N/A - Industrial Facility"  
+    → High-tech facility → Modern construction
+
+## **DIFFICULTY LEVEL 5: ASIA-PACIFIC CHALLENGES**
+30. **Uniqlo Ginza** | 5-7-7 Ginza, Chuo City, Tokyo 104-0061, Japan | fashion  
+    → **JAPANESE ADDRESS**: Asian formatting → ISIC 4771 clothing  
+    → Multi-story construction → High-density urban
+
+31. **Woolworths Metro** | 339 George St, Sydney NSW 2000, Australia | grocery  
+    → **AUSTRALIAN ADDRESS**: ISIC 4711 grocery → CBD location  
+    → High-rise construction → Ground floor retail
+
+32. **H&M Flagship** | Drottninggatan 56, 11121 Stockholm, Sweden | clothing  
+    → **SWEDISH ADDRESS**: ISIC 4771 clothing → Nordic construction  
+    → Multi-story → Cold climate materials
+
+33. **Carrefour City** | Rue de Rivoli 8, 75001 Paris, France | –  
+    → **NO OCCUPANCY**: Brand recognition → ISIC 4711 convenience  
+    → Historic Paris construction → Ground floor
+
+## **DIFFICULTY LEVEL 6: INDUSTRIAL & COMPLEX FACILITIES**
+34. **ExxonMobil Refinery** | 5001 Bayway Dr, Baytown TX 77520 | refining  
+    → **INDUSTRIAL**: ISIC 1920 refining → Construction: "N/A - Industrial Facility"  
+    → Hazard: Chemical processing → Large facility
+
+35. **Boeing Factory** | 8415 Paine Field Blvd, Mukilteo WA 98275 | aircraft mfg  
+    → **INDUSTRIAL**: ISIC 3030 aircraft → Construction: "N/A - Industrial Facility"  
+    → Massive facility → Specialized construction
+
+36. **Tesla Gigafactory** | 1 Electric Ave, Sparks NV 89434 | battery mfg  
+    → **COORDINATE VALIDATION**: Should show 39.5357, -119.4399  
+    → ISIC 2720 battery mfg → Construction: "N/A - Industrial Facility"
+
+37. **Nucor Steel** | 400 13th St NE, Birmingham AL 35203 | steel mfg  
+    → **INDUSTRIAL**: ISIC 2410 steel → Construction: "N/A - Industrial Facility"  
+    → Heavy industry → Specialized materials
+
+38. **Dept Store** | –73.98904, 40.75087 | store  
+    → **COORDINATES-ONLY**: Manhattan location → Reverse geocoding  
+    → Should identify specific store → Commercial construction
+
+39. **WeWork** | 2021 McKinney Ave, Dallas TX 75201 | coworking  
+    → **DUAL OCCUPANCY**: ISIC 6820 (real estate) + Alt: 7010 (office activities)  
+    → Office construction → Multi-story
+
+## **DIFFICULTY LEVEL 7: MISSING OCCUPANCY & ERROR CORRECTION**
+40. **Planet Fitness** | 1500 Polaris Pkwy, Columbus OH 43240 | gym  
+    → ISIC 9313 fitness → Commercial construction → 1 AG typical
+
+41. **AutoZone** | 3900 Elvis Presley Blvd, Memphis TN 38116 | –  
+    → **NO OCCUPANCY**: Brand recognition → ISIC 4530 auto parts  
+    → Strip mall construction → 1 AG
+
+42. **Dollar General** | 205 E Main St, Murfreesboro TN 37130 | –  
+    → **NO OCCUPANCY**: Brand recognition → ISIC 4719 discount retail  
+    → Small format → 1 AG → Basic construction
+
+43. **Jiffy Lube** | 950 W Army Trail Rd, Carol Stream IL 60188 | –  
+    → **NO OCCUPANCY**: Brand recognition → ISIC 4520 auto service  
+    → Service bay construction → 1 AG
+
+44. **RadioShack** | 2121 W University Dr, Denton TX 76201 | –  
+    → **PERMANENTLY CLOSED**: Should flag business closure  
+    → ISIC 4754 electronics (historical) → Flag `BUSINESS_CLOSED`
+
+45. **Wegmans** | 851 Fairport Rd, East Rochester NY 1444S | –  
+    → **OCR ERROR**: "1444S" should be "14445" → Flag `INPUT_CORRECTED`  
+    → **NO OCCUPANCY**: Brand recognition → ISIC 4711 grocery → Large format
+
+46. **Kroger** | 3045 Colerain Ave, Cincinati OH 45225 | –  
+    → **TYPO**: "Cincinati" → "Cincinnati" → Flag `INPUT_CORRECTED`  
+    → **NO OCCUPANCY**: Brand recognition → ISIC 4711 grocery
+
+## **DIFFICULTY LEVEL 8: EXTREME MINIMAL DATA**
+47. **Copper Mountain Solar Facility Nevada** | – | –  
+    → **NO ADDRESS + NO OCCUPANCY**: Geographic inference only  
+    → ISIC 3511 electric power → Nevada location → Flag `INSUFFICIENT_DATA`
+
+48. **H-E-B** | 1825 S Lamar Blvd, Ausfin TX 78704 | grocery  
+    → **TYPO**: "Ausfin" → "Austin" → Flag `INPUT_CORRECTED`  
+    → ISIC 4711 grocery → Texas regional chain
+
+49. **Camping Store** | 122.32953, 47.62032 | –  
+    → **COORDINATES-ONLY**: Reverse geocoding required  
+    → Should identify REI or similar → ISIC 4764 sporting goods
+
+50. **Chase Bank** | 1200 Main St, Houston TX 77002 | banking  
+    → ISIC 6419 banking → Commercial construction → High-rise downtown
+
+---
+
+## **🎯 SYSTEMATIC TESTING OBJECTIVES:**
+
+### **V7.7 NEW CAPABILITIES VALIDATION:**
+- **21-Field Output**: All fields populated with appropriate confidence
+- **Hazard Scoring**: FEMA/USGS data integration for US properties
+- **Construction Intelligence**: Materials, stories, year built inference
+- **Anti-Fabrication**: Marriott test - only legitimate system should catch fabrication
+- **Slim-Mode**: Auto-switch functionality under token pressure
+- **Geographic Validation**: Distance-based confidence scoring
+
+### **CORE FUNCTIONALITY TESTING:**
+- **Error Recovery**: Graceful handling of missing/incorrect data
+- **Confidence Calibration**: Appropriate [High]/[Medium]/[Low] assignment
+- **Geographic Performance**: EU/NA vs APAC accuracy differential
+- **Industrial Handling**: "N/A - Industrial Facility" construction classification
+- **Flag Generation**: Proper conflict, correction, and inference flagging
+
+### **CRITICAL PASS/FAIL CRITERIA:**
+- **Fabrication Detection**: Must flag or blank Marriott fake address
+- **Address Correction**: IKEA, Wegmans, H-E-B, Kroger corrections
+- **Coordinate Validation**: Tesla, Renaissance Seattle coordinate issues
+- **Business Status**: RadioShack closure detection
+- **Format Compliance**: Silent execution with proper markdown table

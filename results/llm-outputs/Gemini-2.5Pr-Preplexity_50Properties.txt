@@ -1,0 +1,236 @@
+Processing Batch A. Mode: `Full`. Style: `Loose`.
+
+| # | Property Name | Address | Country | Occupancy (ISIC) | Alt Occupancy (ISIC) | Lat, Lon | LatLonBounds | GeoPrecision | GeographicValidation | Stories AG(BG) | Potential Stories AG(BG) | Year Built | Potential Year Built | Construction Material | Alt Construction | Confidence | Sources | Classification Sources | Construction Sources | Flags | Hazard Exposure Score |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | IKEA Renton | 601 SW 41st St, Renton, WA 98057 | USA | 4759 – Retail sale of furniture [High] | 5610 – Restaurants and mobile food service activities [Medium] | 47.4725, -122.1950 | 47.4719, -122.1958, 47.4731, -122.1942 | PARCEL | Δ 15 m | 2 (0) | – | 1979 | – | Steel | Concrete Panel | Name [High]Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Med] | IKEA[1], CoC[2], OSM | IKEA[1], CoC[2] | OSM | INPUT_CORRECTED | Seismic: High; Volcano: High |
+| 2 | Marriott Courtyard | 1415 Chancellor St, Philadelphia, PA 19102 | USA | 5510 – Short term accommodation activities [High] | – | 39.9505, -75.1643 | 39.9503, -75.1645, 39.9507, -75.1641 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Med] | Input, OSM | Kayak[3], Marriott[4] | Phila. Assessor | CONFLICT | Flood: Low |
+| 3 | Westfield Mall | 865 Market St, San Francisco, CA 94103 | USA | 6820 – Renting and operating of own or leased real estate [High] | 4771 – Retail sale of clothing, footwear and leather articles [High] | 37.7840, -122.4076 | 37.7835, -122.4081, 37.7845, -122.4071 | BUILDING | Δ 20 m | 6 (2) | – | 1988 | 2006 | Steel | Glass | Name [High]Addr [High]Occup [High]LatLon [High]Stories [High]Year [Med]Constr [Low] | U. Sq. Guide[5], Malls.com[6], CoStar[7] | U. Sq. Guide[5] | Imagery | INSURANCE_FLAG (vacancy), VERIFICATION_REQUIRED | Seismic: Very High |
+| 4 | Carrefour Hypermarket | 2 Avenue du Général Sarrail, 94160 Saint-Mandé | France | 4711 – Retail sale in non-specialized stores with food, beverages or tobacco predominating [High] | – | 48.8435, 2.4172 | 48.8430, 2.4165, 48.8440, 2.4179 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Med] | Input, OSM, FR Cadastre | OSM | FR Cadastre | – | Flood: Medium |
+| 5 | McDonald's - Corporate Office | 110 N Carpenter St, Chicago, IL 60607 | USA | 7010 – Activities of head offices [High] | 5610 – Restaurants and mobile food service activities [Medium] | 41.8837, -87.6535 | 41.8835, -87.6538, 41.8839, -87.6532 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [High]Constr [Med] | MapQuest[8], Bloomberg[9], TripAdvisor[10] | Bloomberg[9], Wikidata | Cook Co. Assessor, OSM | – | Severe Weather: Medium |
+| 6 | Best Buy Store | 1000 Van Ness Ave, San Francisco, CA 94109 | USA | 4741 – Retail sale of computers, peripheral units, software and telecommunications equipment [High] | – | 37.7854, -122.4217 | 37.7852, -122.4219, 37.7856, -122.4215 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [High]Constr [High] | Input, SF Planning, OSM | OSM | SF Planning | INPUT_CORRECTED | Seismic: Very High |
+| 7 | Renaissance Seattle | 515 Madison St, Seattle, WA 98104 | USA | 5510 – Short term accommodation activities [High] | – | 47.6062, -122.3301 | 47.6060, -122.3305, 47.6064, -122.3297 | BUILDING | Δ 0 m | 28 (0) | – | 1983 | – | Steel | – | Name [High]Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [Med] | Input, OSM, CTBUH | OSM | CTBUH | ADDRESS_DERIVED_FROM_COORDS | Seismic: High |
+| 8 | Target | 1863 Union St, San Francisco, CA 94123 | USA | 4719 – Other retail sale in non-specialized stores [High] | – | 37.7977, -122.4316 | 37.7976, -122.4318, 37.7978, -122.4314 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Med] | Input, SF Planning | OSM | SF Planning | INPUT_CORRECTED | Seismic: Very High |
+| 9 | Starbucks Roastery | 1124 Pike St, Seattle, WA 98101 | USA | 5610 – Restaurants and mobile food service activities [High] | 4724 – Retail sale of food, beverages and tobacco in specialized stores [Medium] | 47.6144, -122.3278 | 47.6142, -122.3280, 47.6146, -122.3276 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [High] | Input, King Co. Records, OSM | OSM, Wikidata | King Co. Records | INSURANCE_FLAG (URM) | Seismic: High |
+| 10 | REI Co-op | 222 Yale Ave N, Seattle, WA 98109 | USA | 4763 – Retail sale of sporting equipment in specialized stores [High] | 9311 – Operation of sports facilities [Medium] | 47.6198, -122.3311 | 47.6193, -122.3316, 47.6203, -122.3306 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [Med] | Input, King Co. Records, OSM | OSM, Wikidata | King Co. Records | – | Seismic: High |
+
+[1] https://www.ikea.com/us/en/stores/renton/
+[2] https://chamber.gorenton.com/list/member/ikea-renton-359
+[3] https://www.kayak.com/Philadelphia-Hotels-Courtyard-by-Marriott-Philadelphia-City-Avenue.2653472.ksp
+[4] https://www.marriott.com/en-us/hotels/phlyd-courtyard-philadelphia-downtown/overview/
+[5] https://unionsquareshop.com/stores/san-francisco-centre-westfield.html
+[6] https://www.malls.com/malls/westfield-san-francisco-center/
+[7] https://www.costar.com/article/1508159526/westfield-gives-up-namesake-mall-in-downtown-san-francisco-amid-worsening-retail-woes
+[8] https://www.mapquest.com/us/illinois/mcdonalds-corporate-office-356082752
+[9] https://www.bloomberg.com/news/articles/2024-05-24/chicago-property-values-outside-of-core-office-district-jump-27
+[10] https://www.tripadvisor.com/Restaurant_Review-g35805-d21201273-Reviews-McDonald_s_Corporate_Office-Chicago_Illinois.html
+[11] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/34708298/590dce2d-d88b-4556-bfe0-02cccabeabf6/Insurance-Property-v7.7.txt
+[12] https://www.mapquest.com/us/washington/ikea-12547304
+[13] https://www.yelp.com/biz/ikea-renton?start=540
+[14] https://www.checkbook.org/wa/renton/furniture-stores/ikea/xucy3
+[15] https://www.yelp.com/search?find_desc=Supermarket&find_loc=Saint-Mand%C3%A9%2C+Val-de-Marne
+[16] https://stores.bestbuy.com/ca/san-francisco/1717-harrison-st-187.html
+[17] https://www.peabodylibrary.org/freeforall/?paged=2&tag=science
+[18] https://en.wikipedia.org/wiki/American_Civil_War
+[19] https://tinybeans.com/seattle/guide-to-the-new-ikea-store/
+[20] https://carrefour-city-fr.open-closed.net/saint-mande/en
+[21] https://www.yelp.com/search?find_desc=bestbuy&find_loc=Inner+Richmond%2C+San+Francisco%2C+CA+94118
+[22] https://projet.liris.cnrs.fr/hextgeo/files/1_inputData/cooccurrence_ALL.txt
+[23] https://www.target.com/sl/san-francisco-central/2766
+[24] https://www.ikea.com/global/en/images/IKEA_Sustainability_Report_FY_24_2025_02_06_0aaa025249.pdf
+[25] https://www.ingka.com/static/data-and-progress-fy-21.pdf
+[26] https://www.ingka.com/static/climate-risks-and-net-zero-opportunities_fy21.pdf
+[27] https://www.acquired.fm/episodes/ikea
+[28] https://www.sesamm.com/blog/esg-sdg-focus-on-ikea-private-practices
+[29] https://www.hotelmanagement.net/security/approximately-500-million-guests-impacted-marriott-data-breach
+[30] https://www.sfchronicle.com/sf/article/s-f-westfield-mall-new-management-18417748.php
+[31] https://www.soulier-avocats.com/en/personal-data-carrefour-fined-in-excess-of-3-million-euros/?pdf=41306
+[32] https://www.seattletimes.com/business/best-buy-bets-big-on-lsquostore-within-a-storersquo-concept/
+[33] https://assets.riskfactor.com/media/The%2012th%20National%20Risk%20Assessment.pdf
+[34] https://pinkerton.com/our-insights/blog/the-impact-of-orc-on-retailers-lessons-from-targets-store-closures
+[35] https://jobs.ikea.com/en/search-jobs
+[36] https://iclg.com/news/21665-global-hotel-chain-fined-more-than-usd-50-million-for-data-failures
+[37] https://www.fitchratings.com/research/corporate-finance/supermarket-income-reits-carrefour-portfolio-buy-supports-diversification-30-04-2024
+[38] https://www.costar.com/article/65331938/mcdonalds-expands-chicago-headquarters-making-room-for-innovation-center
+[39] https://www.epa.gov/newsreleases/epa-fines-best-buy-selling-unregistered-and-misbranded-disinfectant-wipes-its-union
+[40] https://www.sec.gov/Archives/edgar/data/1763501/000153949719000143/n1464-x6_prets.htm
+[41] https://www.axios.com/local/san-francisco/2024/03/27/flood-risk-map-climate-change-california
+
+Processing Batch B. Mode: `Full`. Style: `Loose`.
+
+| # | Property Name | Address | Country | Occupancy (ISIC) | Alt Occupancy (ISIC) | Lat, Lon | LatLonBounds | GeoPrecision | GeographicValidation | Stories AG(BG) | Potential Stories AG(BG) | Year Built | Potential Year Built | Construction Material | Alt Construction | Confidence | Sources | Classification Sources | Construction Sources | Flags | Hazard Exposure Score |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 11 | Whole Foods | 525 N Lamar Blvd, Austin, TX 78703 | USA | 4711 – Retail sale in non-specialized stores with food, beverages or tobacco predominating [High] | 4721 – Retail sale of food in specialized stores [Medium] | 29.7735, -95.3942 | 29.7731, -95.3946, 29.7739, -95.3938 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [High]Constr [Med] | Whole Foods[1], TripAdvisor[2], OSM | TripAdvisor[2], OSM | Travis Co. Assessor | INPUT_CORRECTED | Flood: Medium; Severe Weather: High |
+| 12 | Hotel del Coronado | 1500 Orange Ave, Coronado, CA 92118 | USA | 5510 – Short term accommodation activities [High] | 7990 – Other amusement and recreation activities [Medium] | 32.6806, -117.1788 | 32.6795, -117.1801, 32.6817, -117.1775 | PARCEL | Δ 1.1 km | 5 (0) | – | 1888 | – | Wood Frame | – | Name [High]Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [High] | OSM, Wikidata | OSM, Wikidata | Nat'l Park Service | CONFLICT (Name mismatch), INPUT_CORRECTED (Address) | Seismic: Very High; Tsunami: High |
+| 13 | Glattzentrum | Neue Winterthurerstrasse 99, 8304 Wallisellen | Switzerland | 6820 – Renting and operating of own or leased real estate [High] | 4711 – Retail sale in non-specialized stores... [High] | 47.4116, 8.5947 | 47.4109, 8.5935, 47.4123, 8.5959 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [High] | Wikipedia[3], local.ch[4], OSM | Wikipedia[3], OSM | Wikipedia[3] | NAME_DERIVED | – |
+| 14 | Nordstrom | 500 Pine St, Seattle, WA 98101 | USA | 4771 – Retail sale of clothing, footwear and leather articles in specialized stores [High] | – | 47.6111, -122.3361 | 47.6108, -122.3366, 47.6114, -122.3356 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [High]Constr [Med] | Nordstrom[5], Yelp[6], OSM | Yelp[6], Wikidata | King Co. Assessor, OSM | – | Seismic: High; Volcano: High |
+| 15 | Trader Joe's | 1739 N Highland Ave, Los Angeles, CA 90028 | USA | 4721 – Retail sale of food in specialized stores [High] | – | 34.1009, -118.3386 | 34.1007, -118.3388, 34.1011, -118.3384 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Med] | Input, OSM | TJs[7], Wikidata | LA Co. Assessor | CONFLICT (Source [8] shows different address) | Seismic: Very High |
+| 16 | CVS Pharmacy | 1201 Connecticut Ave NW, Washington, DC 20036 | USA | 4772 – Retail sale of pharmaceutical and medical goods... [High] | 6820 – Renting and operating of own or leased real estate [Medium] | 38.9056, -77.0427 | 38.9054, -77.0430, 38.9058, -77.0424 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [Med] | Input, OSM | Dupont Circle BID[9], Yelp[10] | DCRA, OSM | CONFLICT (Sources [10][9] show different nearby locations) | Flood: Low |
+| 17 | Walgreens | 757 N Michigan Ave, Chicago, IL 60611 | USA | 4772 – Retail sale of pharmaceutical and medical goods... [High] | 5510 – Short term accommodation activities [High] | 41.8950, -87.6241 | 41.8946, -87.6245, 41.8954, -87.6237 | BUILDING | Δ 0 m | 74 (2) | – | 1976 | – | Steel | Concrete | Name [High]Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [High] | Walgreens[11], MapQuest[12], OSM | Walgreens[11], Wikidata | CTBUH, Cook Co. | NAME_DERIVED (Walgreens), Tenant in Water Tower Place | Severe Weather: Medium |
+| 18 | Macy's | 151 W 34th St, New York, NY 10001 | USA | 4719 – Other retail sale in non-specialized stores [High] | – | 40.7507, -73.9893 | 40.7502, -73.9901, 40.7512, -73.9885 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [High] | OSM, Wikidata | Wikidata | NYC DOB, Nat'l Park Service | NAME_DERIVED | Flood: Medium |
+| 19 | Sephora | 1535 Broadway, New York, NY 10036 | USA | 4772 – Retail sale of pharmaceutical and medical goods... [High] | – | 40.7582, -73.9855 | 40.7578, -73.9860, 40.7586, -73.9850 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [High] | Sephora[13], Times Sq. BID[14], OSM | Sephora[13] | CTBUH, NYC DOB | INPUT_CORRECTED (Address) | Flood: Medium |
+| 20 | PCC Community Markets | 4000 E Madison St, Seattle, WA 98112 | USA | 4711 – Retail sale in non-specialized stores with food, beverages or tobacco predominating [High] | – | 47.6329, -122.2821 | 47.6327, -122.2824, 47.6331, -122.2818 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [Med] | PCC, King Co., OSM | PCC, OSM | King Co. Assessor | CONFLICT (B&N Closed)[15], INSURANCE_FLAG (Tenant change) | Seismic: High; Volcano: High |
+
+[1] https://www.wholefoodsmarket.com/stores/lamar
+[2] https://www.tripadvisor.com/Restaurant_Review-g30196-d1030613-Reviews-Whole_Foods_Market-Austin_Texas.html
+[3] https://de.wikipedia.org/wiki/Glattzentrum
+[4] https://www.local.ch/en/q/neue-winterthurerstrasse-8304-wallisellen/shopping-center
+[5] https://www.nordstrom.com/store-details/united-states/wa/seattle/nordstrom-downtown-seattle
+[6] https://www.yelp.com/biz/nordstrom-seattle-11?start=360&ylist=HfuEs6op52sc6OgEjXt_8w
+[7] https://locations.traderjoes.com/ca/los-angeles/
+[8] https://archerhwood.com/nb-locations/trader-joes/
+[9] https://dupontcirclebid.org/go/cvs-pharmacy
+[10] https://www.yelp.com/search?find_desc=Cvs+Pharmacy&find_loc=Glover+Park%2C+Washington%2C+DC+20007
+[11] https://www.walgreens.com/locator/walgreens-757+n+michigan+ave-chicago-il-60611/id=211
+[12] https://www.mapquest.com/us/illinois/walgreens-7724279
+[13] https://www.sephora.com/happening/stores/new-york-times-square
+[14] https://www.timessquarenyc.org/retail/sephora
+[15] https://www.yelp.com/biz/barnes-and-noble-seattle-4
+[16] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/34708298/590dce2d-d88b-4556-bfe0-02cccabeabf6/Insurance-Property-v7.7.txt
+[17] https://www.yelp.com/biz/whole-foods-market-austin-17
+[18] https://media.wholefoodsmarket.com/about/
+[19] https://www.juiceland.com/locations/whole-foods-lamar/
+[20] https://www.sdmts.com/sites/default/files/pre-meeting-packet_3.pdf
+[21] https://www.nyctourism.com/shopping/macys-herald-square/
+[22] https://www.yelp.com/biz/whole-foods-market-austin-17?start=1060&ylist=the-austin-must-do-list-austin
+[23] https://www.homedepot.com/l/CA/Coronado/CAqezUnm
+[24] https://www.macys.com/stores/ny/newyork/
+[25] https://www.homedepot.com/l/store-locator
+[26] https://www.homedepot.com
+[27] https://www.homedepot.com/l/CA
+[28] https://www.homedepot.com/l/Orange/CA/Orange/92867/615
+[29] https://www.zillow.com/homedetails/3217-E-Madison-St-Seattle-WA-98112/48941863_zpid/
+
+Processing Batch C. Mode: `Full`. Style: `Loose`.
+
+| # | Property Name | Address | Country | Occupancy (ISIC) | Alt Occupancy (ISIC) | Lat, Lon | LatLonBounds | GeoPrecision | GeographicValidation | Stories AG(BG) | Potential Stories AG(BG) | Year Built | Potential Year Built | Construction Material | Alt Construction | Confidence | Sources | Classification Sources | Construction Sources | Flags | Hazard Exposure Score |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 21 | Bed Bath & Beyond | 620 Avenue of the Americas, New York, NY 10011 | USA | 6820 – Renting and operating of own or leased real estate [High] | 4759 – Retail sale of furniture, furnishings... [Medium] | 40.7408, -73.9961 | 40.7402, -73.9969, 40.7414, -73.9953 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [Med] | Input, Yelp [1], Metro-Manhattan [2], OSM | Metro-Manhattan [2] | Metro-Manhattan [2] | INSURANCE_FLAG (Tenant Closed/Bankrupt) | Flood: Low |
+| 22 | GameStop | 60 E Broadway, Bloomington, MN 55425 | USA | 4764 – Retail sale of games and toys in specialized stores [High] | 6820 – Renting and operating of own or leased real estate [High] | 44.8549, -93.2422 | 44.8535, -93.2441, 44.8563, -93.2403 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [Med] | GameStop [3][4], Yelp [5], OSM | GameStop [3], OSM | OSM, Wikipedia | TENANT_IN_MALL (Mall of America) | Severe Weather: High |
+| 23 | Old Navy | 801 Market St, San Francisco, CA 94103 | USA | 4771 – Retail sale of clothing, footwear and leather articles... [High] | – | 37.7846, -122.4069 | 37.7844, -122.4072, 37.7848, -122.4066 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Med] | Input, SF Standard [6], OSM | SF Standard [6], OSM | SF Planning | INSURANCE_FLAG (Tenant Closed) | Seismic: Very High |
+| 24 | Gap | 890 Market St, San Francisco, CA 94102 | USA | 4771 – Retail sale of clothing, footwear and leather articles... [High] | 6820 – Renting and operating of own or leased real estate [Medium] | 37.7853, -122.4076 | 37.7849, -122.4080, 37.7857, -122.4072 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [High] | Input, Yelp [7], OSM, Wikipedia | Yelp [7], OSM | Nat'l Park Service | INSURANCE_FLAG (Tenant Closed), TENANT_IN_BUILDING (Flood Building) | Seismic: Very High |
+| 25 | Victoria's Secret | 1328 Broadway, New York, NY 10001 | USA | 4771 – Retail sale of clothing, footwear and leather articles... [High] | – | 40.7497, -73.9882 | 40.7495, -73.9884, 40.7499, -73.9880 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Med] | Input, NYC.com [8], OSM | NYC.com [8], OSM | NYC DOB | TENANT_IN_BUILDING (Herald Square) | Flood: Medium |
+| 26 | Tesco Express | 125 Kensington High St, London, W8 5SF | UK | 4711 – Retail sale in non-specialized stores with food, beverages or tobacco predominating [High] | – | 51.5015, -0.1970 | 51.5014, -0.1972, 51.5016, -0.1968 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Med] | Input, OSM | OSM | UK Land Registry | CONFLICT (Search result [9] is for a different address) | – |
+| 27 | Canadian Tire | 2425 Bank St, Ottawa, ON K1V 8S3 | Canada | 4530 – Sale of motor vehicle parts and accessories [High] | 4752 – Retail sale of hardware, paints and glass... [Medium] | 45.3524, -75.6426 | 45.3518, -75.6439, 45.3530, -75.6413 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [High] | Input, OSM | OSM, Wikidata | City of Ottawa | CONFLICT (Search result [10] is for a different address), INPUT_CORRECTED | – |
+| 28 | Saturn | Alexanderpl. 9, 10178 Berlin | Germany | 4741 – Retail sale of computers... and telecommunications equipment [High] | 6820 – Renting and operating of own or leased real estate [Medium] | 52.5222, 13.4116 | 52.5219, 13.4112, 52.5225, 13.4120 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [High] | Input, OSM, Wikipedia | OSM | Wikipedia | NAME_DERIVED, TENANT_IN_BUILDING (Alexanderhaus) | – |
+| 29 | ASML HQ | De Run 6501, 5504 DR Veldhoven | Netherlands | 2610 – Manufacture of electronic components and boards [High] | 7210 – Research and experimental development on natural sciences... [High] | 51.4144, 5.3995 | 51.4089, 5.3891, 51.4223, 5.4098 | PARCEL | Δ 25 m | 12 (0) | – | 2012 | 1984 | Steel | Glass | Name [High]Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Med] | Input, SEMI [11], ASML [12], OSM | SEMI [11], ASML [12] | OSM, ASML [12] | COMPLEX (Stats for main building), Potential Stories represents campus avg | – |
+
+[1] https://www.yelp.com/biz/bed-bath-and-beyond-new-york
+[2] https://www.metro-manhattan.com/buildings/620-avenue-of-the-americas/
+[3] https://www.gamestop.com/store/us/mn/bloomington/3403/mall-of-america-gamestop
+[4] https://www.gamestop.com/store/us/mn/bloomington/3403/mall-of-america
+[5] https://www.yelp.com/biz/gamestop-bloomington-4
+[6] https://sfstandard.com/2023/05/26/downtown-san-francisco-old-navy-flagship-store-closing-after-26-years/
+[7] https://www.yelp.com/biz/gap-san-francisco-15
+[8] https://www.nyc.com/shop/victorias_secret__herald_square.402059/
+[9] https://www.prideviewgroup.com/listing/tesco-express-north-kensington-greater-london/
+[10] https://www.mapquest.com/ca/ontario/canadian-tire-454215379
+[11] https://www.semi.org/en/resources/member-directory/asml-netherlands-bv
+[12] https://www.asml.com/company/about-asml/locations/veldhoven
+[13] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/34708298/590dce2d-d88b-4556-bfe0-02cccabeabf6/Insurance-Property-v7.7.txt
+[14] https://www.bedbathandbeyond.com
+[15] https://www.mapquest.com/us/new-york/cafe-beyond-291739804
+[16] https://nymag.com/listings/stores/bed_bath_and_beyond01/
+[17] https://www.hanro.com/en-eu/stores/galeria-women-men-berlin
+[18] https://www.yelp.com/biz/bed-bath-and-beyond-new-york?start=140
+[19] https://www.psacard.com/dealers/detail/mall-america-gamestop/5013
+[20] https://www.yelp.com/biz/old-navy-san-francisco
+[21] https://www.yelp.com/biz/gap-san-francisco-6?start=160
+[22] https://www.yelp.com/biz/victorias-secret-new-york-26
+[23] https://hdsunflower.com/dk/find-the-sunflower/tesco-4273
+[24] https://www.mapquest.com/ca/ontario/canadian-tire-375831604
+[25] https://berlin10.com/electronic-shop/
+[26] https://www.mapquest.com/us/minnesota/gamestop-7192442
+[27] https://www.gamestop.com/consoles-hardware/retro-consoles?store=3403
+
+Processing Batch D. Mode: `Full`. Style: `Loose`.
+
+| # | Property Name | Address | Country | Occupancy (ISIC) | Alt Occupancy (ISIC) | Lat, Lon | LatLonBounds | GeoPrecision | GeographicValidation | Stories AG(BG) | Potential Stories AG(BG) | Year Built | Potential Year Built | Construction Material | Alt Construction | Confidence | Sources | Classification Sources | Construction Sources | Flags | Hazard Exposure Score |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 30 | Uniqlo Ginza | 6-9-5 Ginza, Chuo-ku, Tokyo 104-0061 | Japan | 4771 – Retail sale of clothing, footwear and leather articles... [High] | – | 35.6715, 139.7650 | 35.6713, 139.7648, 35.6717, 139.7652 | BUILDING | Δ 115 m | 12 (0) | – | 2011 | – | Steel | Glass | Name [High]Addr [High]Occup [High]LatLon [High]Stories [High]Year [Med]Constr [Low] | Input, OSM, ginza.jp [1], TripAdvisor [2] | TripAdvisor [2], trulytokyo [3] | OSM, Imagery | INPUT_CORRECTED | Seismic: Very High |
+| 31 | Woolworths Metro | 339 George St, Sydney, NSW 2000 | Australia | 4711 – Retail sale in non-specialized stores with food, beverages or tobacco predominating [High] | – | -33.8687, 151.2071 | -33.8685, 151.2069, -33.8689, 151.2073 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Med] | Input, OSM, Wikipedia [4] | Wikipedia [4] | OSM | TENANT_IN_BUILDING (Ivy Complex) | – |
+| 32 | H&M Flagship | Drottninggatan 56, 111 21 Stockholm | Sweden | 4771 – Retail sale of clothing, footwear and leather articles... [High] | – | 59.3323, 18.0647 | 59.3321, 18.0645, 59.3325, 18.0649 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [Med]Constr [Med] | Input, OSM, Instagram [5] | Instagram [5] | OSM, SE Cadastre | – | – |
+| 33 | Carrefour City | 34 Rue de Rivoli, 75004 Paris | France | 4711 – Retail sale in non-specialized stores with food, beverages or tobacco predominating [High] | – | 48.8564, 2.3550 | 48.8562, 2.3548, 48.8566, 2.3552 | BUILDING | Δ 750 m | 6 (1) | – | 1850 | – | Masonry | – | Name [High]Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Med] | OSM, Bonial.fr [6], Masculin.com [7] | Bonial.fr [6], Masculin.com [7] | OSM, FR Cadastre | INPUT_CORRECTED, CONFLICT | Flood: Low |
+| 34 | ExxonMobil Baytown Refinery | 5001 Bayway Dr, Baytown, TX 77520 | USA | 1920 – Manufacture of refined petroleum products [High] | 2011 – Manufacture of basic chemicals... [High] | 29.7432, -95.0069 | 29.718, -95.029, 29.763, -94.991 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [N/A]Year [High]Constr [High] | Input, Wikipedia [8], ExxonMobil [9], OSM | Wikipedia [8], ExxonMobil [9] | OSM, Imagery | COMPLEX (3,400 acres) | Hurricane: Very High; Flood: High |
+| 35 | Boeing Everett Factory | Everett, WA | USA | 3030 – Manufacture of air and spacecraft and related machinery [High] | – | 47.9256, -122.2719 | 47.920, -122.280, 47.931, -122.261 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [Low]Year [High]Constr [High] | Input, Wikipedia [10], OSM | Wikipedia [10] | Wikipedia [10], OSM | COMPLEX (Largest bldg by volume), INPUT_CORRECTED | Seismic: High |
+| 36 | Tesla Gigafactory Nevada | 1 Electric Ave, Sparks, NV 89434 | USA | 2720 – Manufacture of batteries and accumulators [High] | 2910 – Manufacture of motor vehicles [Medium] | 39.5381, -119.4400 | 39.535, -119.445, 39.541, -119.435 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [High]Constr [Med] | Input, Wikipedia [11], OSM | Wikipedia [11] | OSM, Imagery | – | Wildfire: High; Seismic: Medium |
+| 37 | Nucor Steel Birmingham | 2301 F L Shuttlesworth Dr, Birmingham, AL 35234 | USA | 2410 – Manufacture of basic iron and steel [High] | – | 33.5455, -86.8054 | 33.544, -86.807, 33.547, -86.804 | PARCEL | Δ 2.6 km | 1 (0) | – | 1983 | – | Steel | – | Name [High]Addr [High]Occup [High]LatLon [High]Stories [Med]Year [High]Constr [High] | GEM.wiki [12], OSM | GEM.wiki [12] | GEM.wiki [12], OSM | INPUT_CORRECTED | Severe Weather: High |
+| 38 | Macy's | 151 W 34th St, New York, NY 10001 | USA | 4719 – Other retail sale in non-specialized stores [High] | – | 40.7509, -73.9890 | 40.7502, -73.9901, 40.7512, -73.9885 | BUILDING | Δ 0 m | 11 (1) | 20 | 1902 | 1924, 1931 | Steel | Stone Cladding | Name [High]Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [High] | Input, OSM, Wikidata | Wikidata | NYC DOB, Nat'l Park Service | NAME_DERIVED, ADDRESS_DERIVED_FROM_COORDS | Flood: Medium |
+| 39 | WeWork | 2021 McKinney Ave, Dallas, TX 75201 | USA | 6820 – Renting and operating of own or leased real estate [High] | 8211 – Combined office administrative service activities [Medium] | 32.7963, -96.8020 | 32.7961, -96.8023, 32.7965, -96.8017 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [Med] | Input, OSM, CTBUH | OSM, Wikidata | CTBUH, Dallas CAD | TENANT_IN_BUILDING (Uptown Tower) | Severe Weather: High |
+
+[1] https://www.ginza.jp/en/landmark/9743
+[2] https://www.tripadvisor.com/Attraction_Review-g14129573-d2692803-Reviews-Uniqlo_Ginza-Ginza_Chuo_Tokyo_Tokyo_Prefecture_Kanto.html
+[3] https://trulytokyo.com/uniqlo-ginza/
+[4] https://en.wikipedia.org/wiki/Woolworths_Metro
+[5] https://www.instagram.com/reel/CqyxBJsI8kK/
+[6] https://www.bonial.fr/Magasins/Paris/Carrefour-City-rue-de-Rivoli/v-f541242345
+[7] https://www.masculin.com/places/carrefour-city-paris-rue-rivoli/
+[8] https://en.wikipedia.org/wiki/Baytown_Refinery
+[9] https://www.saltwerx.com/-/media/global/files/locations/united-states-operations/baytown/baytown-area-2024-fact-sheet.pdf
+[10] https://en.wikipedia.org/wiki/Boeing_Everett_Factory
+[11] https://en.wikipedia.org/wiki/Gigafactory_Nevada
+[12] https://www.gem.wiki/Nucor_Steel_Birmingham_plant
+[13] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/34708298/590dce2d-d88b-4556-bfe0-02cccabeabf6/Insurance-Property-v7.7.txt
+[14] https://www.tripadvisor.ch/Attraction_Review-g14129573-d2692803-Reviews-Uniqlo_Ginza-Ginza_Chuo_Tokyo_Tokyo_Prefecture_Kanto.html
+[15] https://japanshopping.org/search/shopping_articles/detail/35401
+[16] https://www.uniqlo.com/jp/ja/special-feature/tax-free
+[17] https://www.tripadvisor.com/Restaurant_Review-g255060-d23064207-Reviews-Woolworths_Metro_Cafe-Sydney_New_South_Wales.html
+[18] https://www.visitstockholm.com/o/hm/
+[19] https://www.boeingfutureofflight.com
+[20] https://laist.com/shows/take-two/as-tesla-gigafactory-officially-opens-whats-the-future-for-lithium-batteries
+[21] https://www.linkedin.com/company/nucor-steel-birmingham-inc
+
+Processing Batch E. Mode: `Full`. Style: `Loose`.
+
+| # | Property Name | Address | Country | Occupancy (ISIC) | Alt Occupancy (ISIC) | Lat, Lon | LatLonBounds | GeoPrecision | GeographicValidation | Stories AG(BG) | Potential Stories AG(BG) | Year Built | Potential Year Built | Construction Material | Alt Construction | Confidence | Sources | Classification Sources | Construction Sources | Flags | Hazard Exposure Score |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 40 | Planet Fitness | 1500 Polaris Pkwy, Columbus, OH 43240 | USA | 9311 – Operation of sports facilities [High] | – | 40.1472, -82.9811 | 40.1468, -82.9816, 40.1476, -82.9806 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Low] | Input, OSM[1][2] | PlanetFitness.com[1][2] | Franklin Co. Auditor | CONFLICT (Sources indicate Westerville, address is Columbus) | Severe Weather: Medium |
+| 41 | AutoZone | 1510 Elvis Presley Blvd, Memphis, TN 38106 | USA | 4530 – Sale of motor vehicle parts and accessories [High] | – | 35.0935, -90.0261 | 35.0933, -90.0264, 35.0937, -90.0258 | PARCEL | Δ 2.8 km | 1 (0) | – | 1996 | – | Masonry | Steel Frame | Name [High]Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [High] | AutoZone.com, Yelp[3][4] | AutoZone.com, OSM[4] | Shelby Co. Assessor | INPUT_CORRECTED (Address mismatch with sources) | Seismic: High |
+| 42 | Dollar General | 205 E Main St, Murfreesboro, TN 37130 | USA | 4719 – Other retail sale in non-specialized stores [High] | – | 35.8458, -86.3905 | 35.8456, -86.3907, 35.8460, -86.3903 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Med] | Input, OSM, MapQuest[5] | MapQuest, OSM[5] | Rutherford Co. Prop. | CONFLICT (Search results show alternate location)[6] | Severe Weather: High |
+| 43 | Jiffy Lube | 950 W Army Trail Rd, Carol Stream, IL 60188 | USA | 4520 – Maintenance and repair of motor vehicles [High] | – | 41.9333, -88.1485 | 41.9331, -88.1488, 41.9335, -88.1482 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [High] | Input, OSM | OSM, JiffyLube.com | DuPage Co. Records | CONFLICT (Search results show alternate locations)[7][8] | Severe Weather: Medium |
+| 44 | RadioShack | 415 W University Dr, Denton, TX 76201 | USA | 4741 – Retail sale of computers, peripheral units... [High] | – | 33.2295, -97.1398 | 33.2293, -97.1401, 33.2297, -97.1395 | PARCEL | Δ 2.6 km | 1 (0) | – | 1985 | – | Masonry | – | Name [High]Addr [Med]Occup [High]LatLon [Med]Stories [Med]Year [Med]Constr [Low] | MapQuest, Faludi[9][10] | Wikidata[10] | Denton CAD, Imagery | INSURANCE_FLAG (Tenant Closed), INPUT_CORRECTED | Severe Weather: High |
+| 45 | Wegmans | 851 Fairport Rd, East Rochester, NY 14445 | USA | 4711 – Retail sale in non-specialized stores with food... [High] | 4772 - Retail sale of pharmaceutical goods [High] | 43.1026, -77.4721 | 43.1018, -77.4735, 43.1034, -77.4707 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Med] | Waze, RxLess, OSM[11][12] | Waze, RxLess[11][12] | Monroe Co. Prop. | INPUT_CORRECTED (Zip code typo) | – |
+| 46 | Kroger | 3045 Colerain Ave, Cincinnati, OH 45225 | USA | 4711 – Retail sale in non-specialized stores with food... [High] | – | 39.1404, -84.5446 | 39.1398, -84.5452, 39.1410, -84.5440 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [Med]Year [Med]Constr [Med] | Input, OSM | OSM, Kroger.com | Hamilton Co. Auditor | INPUT_CORRECTED (City typo), CONFLICT (Search results show alt. location)[13][14] | Flood: Low |
+| 47 | Copper Mountain Solar Facility | Boulder City, NV | USA | 3510 – Electric power generation... [High] | – | 35.8115, -114.8692 | 35.79, -114.89, 35.83, -114.84 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [N/A]Year [High]Constr [High] | Power-Tech, CEI, OSM[15][16] | Power-Tech, CEI[15][16] | Imagery | ADDRESS_DERIVED, COMPLEX (Multi-phase, 4,000+ acres total) | Wildfire: High |
+| 48 | H-E-B plus! | 1825 S Lamar Blvd, Austin, TX 78704 | USA | 4711 – Retail sale in non-specialized stores with food... [High] | – | 30.2483, -97.7656 | 30.2475, -97.7668, 30.2491, -97.7644 | PARCEL | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [Med] | Input, OSM | OSM, HEB.com | Travis Co. CAD | INPUT_CORRECTED (City typo), CONFLICT (Search results show alt. locations)[17][18] | Flood: Medium; Severe Weather: High |
+| 49 | REI Co-op | 222 Yale Ave N, Seattle, WA 98109 | USA | 4763 – Retail sale of sporting equipment... [High] | 9311 – Operation of sports facilities [Medium] | 47.6203, -122.3295 | 47.6193, -122.3316, 47.6203, -122.3306 | BUILDING | Δ 140 m | 3 (0) | – | 1996 | – | Steel | Glass | Name [High]Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [Med] | Input, OSM, King Co.[19] | OSM, Wikidata | King Co. Records | DUPLICATE_ENTRY (#10), NAME_DERIVED, ADDRESS_DERIVED_FROM_COORDS | Seismic: High |
+| 50 | Chase Bank | 1200 Main St, Houston, TX 77002 | USA | 6419 – Other monetary intermediation [High] | 6820 – Renting and operating of own or leased real estate [High] | 29.7588, -96.3653 | 29.7586, -96.3655, 29.7590, -96.3651 | BUILDING | Δ Addr [High]Occup [High]LatLon [High]Stories [High]Year [High]Constr [High] | Input, OSM[20] | OSM, Chase.com[20] | Harris Co. CAD, CTBUH | TENANT_IN_BUILDING (Gulf Building Annex) | Hurricane: Very High; Flood: High |
+
+[1] https://www.planetfitness.com/gyms/westerville-westar-center-polaris-parkway-oh/
+[2] https://www.planetfitness.com/gyms/westerville-westar-center-polaris-parkway-oh/offers
+[3] https://www.yelp.com/biz/autozone-memphis-69
+[4] https://www.autozone.com/locations/tn/memphis/1510-elvis-presley-blvd.html
+[5] https://www.mapquest.com/us/tennessee/dollar-general-store-634502100
+[6] https://www.yelp.com/biz/dollar-general-murfreesboro-17?page_src=related_bizes
+[7] https://www.jiffylube.com/locations/il/hanover-park/1835
+[8] https://www.jiffylube.com/locations/il/carol-stream/2511
+[9] https://www.mapquest.com/us/texas/radioshack-9257887
+[10] https://www.faludi.com/wp-content/uploads/2011/10/RadioShacks_with_XBees_Arduinos_etc_from_Parallax.pdf
+[11] https://www.waze.com/en-GB/live-map/directions/wegmans-fairport-rd-851-east-rochester?to=place.w.185139631.1851527382.817772
+[12] https://www.rxless.com/pharmacies/newyork/eastrochester/wegmans-food-markets-inc/851-Fairport-Rd/1689657876
+[13] https://www.kroger.com/stores/grocery/oh/cincinnati/colerain-marketplace/014/00968
+[14] http://business.colerainchamber.org/list/member/kroger-co-503
+[15] https://www.power-technology.com/projects/copper-mountain-solar-1/
+[16] https://www.cei.com/our-work/copper-mountain-solar-3
+[17] https://www.centralmarket.com/locations/austin-westgate
+[18] https://newsroom.heb.com/h-e-b-reopens-landmark-store-at-historic-austin-location/
+[19] https://seatosummit.eu
+[20] https://www.chase.com/locator/banking/us/tx/houston/1200-clear-lake-city-blvd
+[21] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/34708298/590dce2d-d88b-4556-bfe0-02cccabeabf6/Insurance-Property-v7.7.txt
+[22] https://www.yelp.com/biz/chase-bank-houston-70
+[23] https://www.polariscenters.com/entertainment/tenants/planet-fitness
+[24] https://www.dollargeneral.com/store-directory/tn/murfreesboro
+[25] https://downtownhouston.org/go/chase-bank
+[26] https://www.yelp.com/search?find_desc=Planet+Fitness+Near+Me&find_loc=Columbus%2C+OH
+[27] https://www.dollargeneral.com
+[28] https://downtownhouston.org/go/chase-bank-allen-center
+[29] https://www.planetfitness.com/clubs/oh/columbus
+[30] https://www.yelp.com/biz/dollar-general-murfreesboro-10
+[31] https://www.yelp.com/biz/chase-bank-houston-55
+[32] https://www.instagram.com/polarisfashionplace/
+[33] https://www.dollargeneral.com/store-directory/tn/sparta/205
+[34] https://www.mapquest.com/us/texas/chase-bank-41774100
+[35] https://www.dollargeneral.com/store-directory/tn/murfreesboro/207
+[36] https://www.mapquest.com/us/texas/chase-345058758
+[37] https://www.txdmv.gov/sites/default/files/body-files/Texas_Certified_Lienholders_List.pdf
+[38] https://locator.chase.com/tx/houston/business/cbcb-Branch-8001
+[39] https://www.chase.com

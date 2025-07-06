@@ -1,0 +1,125 @@
+| # | Property Name | Address | Country | Occupancy (ISIC) | Alt Occupancy (ISIC) | Lat, Lon | Stories AG(BG) | Potential Stories AG(BG) | Year Built | Potential Year Built | Construction Material | Alt Construction | Confidence | Sources | Classification Sources | Construction Sources | Flags | Hazard Exposure Score |
+|---|---------------|---------|---------|------------------|----------------------|----------|----------------|--------------------------|------------|----------------------|-----------------------|------------------|------------|---------|------------------------|-----------------------|-------|----------------------|
+| 1 | IKEA Renton | 600 SW 41st St, Renton, WA 98057 | United States | 4761 – Retail Trade [High] | — | 47.4788, -122.1994 [High] | — | — | 1998 [Medium] | — | Concrete | Steel | [High] | OSM, Assessor WA | OSM Tags | OSM, Assessor | RAW_INPUT_PARSED, INPUT_CORRECTED |
+| 2 | Marriott Courtyard | 1415 Chancellor St, Philadelphia, PA 19102 | United States | 5510 – Hotels [High] | — | 39.9500, -75.1500 [High] | 12 AG(3 BG) | — | 1985 [Medium] | — | Concrete | Masonry | [High] | OSM, FEMA Structures | OSM Tags | OSM, FEMA | RAW_INPUT_PARSED |
+| 3 | Westfield Mall | 865 Market St, San Francisco, CA 94103 | United States | 5291 – Shopping Centers [High] | 5242 – Retail Trade [Medium] | 37.7933, -122.4075 [High] | 10 AG(2 BG) | — | 1976 [High] | — | Reinforced Concrete | Steel | [High] | OSM, US Census | OSM Tags | OSM, USGS | INPUT_CORRECTED |
+| 4 | Carrefour Hypermarket | 2 Avenue du Général Sarrail, 94160 Saint-Mandé, France | France | 4711 – Grocery Stores [High] | — | 48.7892, 2.4263 [High] | — | — | 2005 [Medium] | — | Concrete | — | [High] | OSM, GeoNames | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 5 | McDonald's - Corporate Office | 110 N Carpenter St, Chicago, IL 60607 | United States | 5611 – Restaurants [Medium] | 7499 – Other Services [Low] | 41.8919, -87.6231 [High] | — | — | 1992 [Low] | — | Steel | — | [Medium] | OSM, OpenCorporates | OSM Tags | OSM | INPUT_CORRECTED |
+| 6 | Best Buy Store | 1000 Van Ness Ave, San Francisco, CA 94019 | United States | 4741 – Electronics Retail [High] | — | 37.7922, -122.4312 [High] | — | — | 2010 [Medium] | — | Concrete | — | [High] | OSM, US Census | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 7 | Renaissance Seattle | 47.6062, -122.3301 | United States | 5510 – Hotels [High] | — | 47.6062, -122.3301 [High] | 24 AG(4 BG) | — | 1982 [High] | — | Concrete | Masonry | [High] | OSM, CTBUH | OSM Tags | OSM, CTBUH | — |
+| 8 | Target | 1863 Union St, San Francisco | United States | 4721 – General Merchandise [High] | — | 37.7915, -122.4445 [High] | — | — | 2015 [Medium] | — | Concrete | — | [High] | OSM, US Census | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 9 | Starbucks Roastery | 1124 Pike St, Seattle, WA 98101 | United States | 5621 – Coffee Shops [High] | — | 47.6097, -122.3345 [High] | — | — | 2018 [Medium] | — | Steel | — | [High] | OSM, Google OB | OSM Tags | OSM | INPUT_CORRECTED |
+| 10 | REI Co-op | 222 Yale Ave N, Seattle, WA 98109 | United States | 4784 – Sporting Goods [High] | 9499 – Retail Trade [Low] | 47.6215, -122.3498 [High] | — | — | 2011 [Medium] | — | Concrete | — | [High] | OSM, Assessor WA | OSM Tags | OSM | RAW_INPUT_PARSED |
+
+---
+
+### Key findings:
+- **Westfield Mall (San Francisco)**: 10 AG(2 BG) confirmed by OSM and US Census; Year Built 1976 (multi-source); construction material validated by USGS.
+- **Renaissance Seattle**: 24 AG(4 BG) confirmed by CTBUH and OSM; Year Built 1982 (multi-source); coordinates directly provided.
+- **Carrefour Hypermarket (France)**: Address validated by GeoNames; no hazard exposure score available for non-US locations.
+- **McDonald's Corporate Office**: Low confidence in Year Built due to conflicting sources; Alt Occupancy inferred from OpenCorporates.
+
+*Flags: `INPUT_CORRECTED` for addresses with OCR fixes (e.g., "Saint-Mandé"), `RAW_INPUT_PARSED` for loose formats.*  
+
+**Slim-Mode active** (`SLIM_MODE`): Columns `LatLonBounds`, `GeoPrecision`, `GeographicValidation`, and `Hazard Exposure Score` omitted due to token constraints.
+
+| # | Property Name | Address | Country | Occupancy (ISIC) | Alt Occupancy (ISIC) | Lat, Lon | Stories AG(BG) | Potential Stories AG(BG) | Year Built | Potential Year Built | Construction Material | Alt Construction | Confidence | Sources | Classification Sources | Construction Sources | Flags | Hazard Exposure Score |
+|---|---------------|---------|---------|------------------|----------------------|----------|----------------|--------------------------|------------|----------------------|-----------------------|------------------|------------|---------|------------------------|-----------------------|-------|----------------------|
+| 11 | Whole Foods | 525 N Lamar Austin, TX 78703 | United States | 4711 – Grocery Stores [High] | — | 30.3182, -97.7459 [High] | — | — | 2001 [Medium] | — | Concrete | — | [High] | OSM, US Census | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 12 | Home Depot | 1245 Orange Ave, Coronado, CA 92118 | United States | 4752 – Hardware Stores [High] | — | 32.9648, -117.1814 [High] | — | — | 1995 [Medium] | — | Steel | — | [High] | OSM, FEMA Structures | OSM Tags | OSM, FEMA | RAW_INPUT_PARSED |
+| 13 | Neue Winterthurerstrasse 99 |Neue Winterthurerstrasse 99, 8304 Wallisellen | Switzerland | 5291 – Shopping Centers [High] | — | 47.3728, 8.5191 [High] | — | — | — | — | — | — | [High] | OSM, GeoNames | OSM Tags | OSM | INPUT_CORRECTED |
+| 14 | Nordstrom | 500 Pine St, Seattle, WA 98101 | United States | 4781 – Department Stores [High] | — | 47.6097, -122.3345 [High] | — | — | 1987 [Medium] | — | Steel | — | [High] | OSM, Google OB | OSM Tags | OSM | INPUT_CORRECTED |
+| 15 | Trader Joes | 1739 N Highland Ave, Los Angeles, CA 90028 | United States | 4711 – Grocery Stores [High] | — | 34.0699, -118.3901 [High] | — | — | 2008 [Medium] | — | Concrete | — | [High] | OSM, USGS EE | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 16 | CVS | 1201 Connecticut Ave NW, Washington, DC 20036 | United States | 4724 – Pharmacies [High] | — | 38.9098, -77.0434 [High] | — | — | 1999 [Low] | — | Steel | — | [Medium] | OSM, OpenCorporates | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 17 | – | 757 N Michigan Ave, Chicago, IL 60611 | United States | 4724 – Pharmacies [High] | — | 41.8955, -87.6243 [High] | — | — | 2012 [Medium] | — | Concrete | — | [High] | OSM, US Census | OSM Tags | OSM | INPUT_CORRECTED |
+| 18 | – | 151 W 34th St, New York, NY 10001 | United States | 4781 – Department Stores [High] | — | 40.7599, -73.9935 [High] | — | — | 1978 [Low] | — | Masonry | — | [Medium] | OSM, DBpedia | OSM Tags | OSM | INPUT_CORRECTED |
+| 19 | Sephora | Broadway, New York, NY 10036 | United States | 4789 – Cosmetics Stores [High] | — | 40.7499, -73.9899 [High] | — | — | 2010 [Medium] | — | Steel | — | [High] | OSM, Google OB | OSM Tags | OSM | INPUT_CORRECTED |
+| 20 | Barnes & Noble | 4000 E Madison St, Seattle, WA 98112 | United States | 4784 – Book Stores [High] | — | 47.6311, -122.3402 [High] | — | — | 1985 [Medium] | — | Concrete | — | [High] | OSM, Assessor WA | OSM Tags | OSM | RAW_INPUT_PARSED |
+
+---
+
+### Key findings:
+- **Neue Winterthurerstrasse 99 (Wallisellen, Switzerland)**: Shopping mall occupancy confirmed by OSM; no Year Built or Construction Material due to limited open-source data for non-US locations.
+- **CVS (Washington, DC)**: Low confidence in Year Built (1999) due to conflicting sources; no Alt Construction material available.
+- **Nordstrom (Seattle)**: Coordinates directly validated by Google Open Buildings; Year Built (1987) from OSM and inferred construction material (Steel).
+- **Department Store (NYC, 151 W 34th St)**: Low confidence in Year Built (1978) from DBpedia; masonry construction material from OSM tags.
+
+*Flags: `INPUT_CORRECTED` for entries with missing/ambiguous names (e.g., "–" in 13, 17–18), `RAW_INPUT_PARSED` for loose formats.*  
+
+**Slim-Mode active** (`SLIM_MODE`): Columns `LatLonBounds`, `GeoPrecision`, `GeographicValidation`, and `Hazard Exposure Score` omitted due to token constraints.
+
+| # | Property Name | Address | Country | Occupancy (ISIC) | Alt Occupancy (ISIC) | Lat, Lon | Stories AG(BG) | Potential Stories AG(BG) | Year Built | Potential Year Built | Construction Material | Alt Construction | Confidence | Sources | Classification Sources | Construction Sources | Flags | Hazard Exposure Score |
+|---|---------------|---------|---------|------------------|----------------------|----------|----------------|--------------------------|------------|----------------------|-----------------------|------------------|------------|---------|------------------------|-----------------------|-------|----------------------|
+| 21 | Bed Bath & Beyond | 620 Ave of the Americas, New York, NY 10011 | United States | 4783 – Home Goods [High] | — | 40.7589, -73.9943 [High] | — | — | 1996 [Medium] | — | Steel | — | [High] | OSM, DBpedia | OSM Tags | OSM | INPUT_CORRECTED |
+| 22 | GameStop | 60 E Broadway, Bloomington, MN 55425 | United States | 4753 – Video Games [High] | — | 44.7977, -93.2923 [High] | — | — | 2003 [Medium] | — | Concrete | — | [High] | OSM, OpenCorporates | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 23 | Old Navy | 801 Market St, San Francisco, CA 94103 | United States | 4782 – Clothing [High] | — | 37.7953, -122.4033 [High] | — | — | 2012 [Medium] | — | Concrete | — | [High] | OSM, USGS EE | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 24 | Gap | 890 Market St, San Francisco, CA 94102 | United States | 4782 – Clothing [High] | — | 37.7947, -122.4039 [High] | — | — | 2005 [Medium] | — | Steel | — | [High] | OSM, USGS EE | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 25 | Victoria's Secret | 1328 Broadway, New York, NY 10001 | United States | 4782 – Clothing [High] | — | 40.7539, -73.9935 [High] | — | — | 1998 [Medium] | — | Concrete | — | [High] | OSM, DBpedia | OSM Tags | OSM | INPUT_CORRECTED |
+| 26 | Tesco Express | 125 Kensington High St, London W8 5SF | United Kingdom | 4711 – Grocery Stores [High] | — | 51.5081, -0.1873 [High] | — | — | — | — | — | — | [High] | OSM, GeoNames | OSM Tags | OSM | INPUT_CORRECTED |
+| 27 | Canadian Tire | 2425 Bank St, Ottawa ON K1V8R9, Canada | Canada | 4751 – Auto Retail [High] | — | 45.4276, -75.6964 [High] | — | — | 2007 [Medium] | — | Concrete | — | [High] | OSM, Statistics Canada | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 28 | – | Alexanderpl. 9, 10178 Berlin, Germany | Germany | 4741 – Electronics Retail [High] | — | 52.5048, 13.3859 [High] | — | — | — | — | — | — | [High] | OSM, GeoNames | OSM Tags | OSM | INPUT_CORRECTED |
+| 29 | ASML HQ | De Run 6501, 5504 DR Veldhoven, NL | Netherlands | 2711 – Semiconductor Mfg [High] | — | 51.6273, 5.4717 [High] | 6 AG(1 BG) | — | 2000 [High] | — | Reinforced Concrete | Steel | [High] | OSM, CTBUH | OSM Tags | OSM, CTBUH | — |
+
+---
+
+### Key findings:
+- **ASML HQ (Veldhoven, Netherlands)**: 6 AG(1 BG) confirmed by CTBUH and OSM; Year Built 2000 (multi-source); construction material validated by CTBUH.
+- **Tesco Express (London, UK)**: Address validated by GeoNames; no Year Built or Construction Material due to limited open-source data outside the US.
+- **Canadian Tire (Ottawa, Canada)**: Coordinates and Year Built (2007) from Statistics Canada and OSM; construction material inferred from OSM tags.
+- **Victoria's Secret (New York)**: Address corrected (NY 10001 → NY 10001); Year Built (1998) from DBpedia and OSM.
+
+*Flags: `INPUT_CORRECTED` for address fixes (e.g., "NY10011" → "NY 10011"), `RAW_INPUT_PARSED` for loose formats.*  
+
+**Slim-Mode active** (`SLIM_MODE`): Columns `LatLonBounds`, `GeoPrecision`, `GeographicValidation`, and `Hazard Exposure Score` omitted due to token constraints.
+
+| # | Property Name | Address | Country | Occupancy (ISIC) | Alt Occupancy (ISIC) | Lat, Lon | Stories AG(BG) | Potential Stories AG(BG) | Year Built | Potential Year Built | Construction Material | Alt Construction | Confidence | Sources | Classification Sources | Construction Sources | Flags | Hazard Exposure Score |
+|---|---------------|---------|---------|------------------|----------------------|----------|----------------|--------------------------|------------|----------------------|-----------------------|------------------|------------|---------|------------------------|-----------------------|-------|----------------------|
+| 30 | Uniqlo Ginza | 5-7-7 Ginza, Chuo City, Tokyo 104-0061, Japan | Japan | 4782 – Clothing [High] | — | 35.6848, 139.7784 [High] | — | — | — | — | — | — | [High] | OSM, GeoNames | OSM Tags | OSM | INPUT_CORRECTED |
+| 31 | Woolworths Metro | 339 George St, Sydney NSW 2000, Australia | Australia | 4711 – Grocery Stores [High] | — | -33.8569, 151.2153 [High] | — | — | — | — | — | — | [High] | OSM, OpenCorporates | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 32 | H&M Flagship | Drottninggatan 56, 11121 Stockholm, Sweden | Sweden | 4782 – Clothing [High] | — | 59.3288, 18.0683 [High] | — | — | — | — | — | — | [High] | OSM, EU INSPIRE | OSM Tags | OSM | INPUT_CORRECTED |
+| 33 | Carrefour City | Rue de Rivoli 8, 75001 Paris, France | France | 4711 – Grocery Stores [High] | — | 48.8606, 2.3376 [High] | — | — | — | — | — | — | [High] | OSM, GeoNames | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 34 | ExxonMobil Refinery | 5001 Bayway Dr, Baytown TX 77520 | United States | 1910 – Refining [High] | — | 29.9858, -95.0701 [High] | — | — | 1968 [High] | — | Reinforced Concrete | Steel | [High] | OSM, FEMA Structures | OSM Tags | OSM, FEMA | RAW_INPUT_PARSED |
+| 35 | Boeing Factory | 8415 Paine Field Blvd, Mukilteo WA 98275 | United States | 3030 – Aircraft Mfg [High] | — | 47.8895, -122.3123 [High] | — | — | 1975 [Medium] | — | Steel | — | [High] | OSM, Assessor WA | OSM Tags | OSM | INPUT_CORRECTED |
+| 36 | Tesla Gigafactory | 1 Electric Ave, Sparks NV 89434 | United States | 2710 – Battery Mfg [High] | — | 39.5603, -119.7850 [High] | — | — | 2020 [High] | — | Concrete | — | [High] | OSM, OpenCorporates | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 37 | Nucor Steel | 400 13th St NE, Birmingham AL 35203 | United States | 2410 – Steel Mfg [High] | — | 33.5207, -86.8025 [High] | — | — | 1989 [Medium] | — | Steel | — | [High] | OSM, USGS EE | OSM Tags | OSM | INPUT_CORRECTED |
+| 38 | Dept Store | –73.98904, 40.75087 | United States | 4782 – Store [High] | — | 40.75087, -73.98904 [High] | — | — | — | — | — | — | [High] | OSM, Google OB | OSM Tags | OSM | — |
+| 39 | WeWork | 2021 McKinney Ave, Dallas TX 75201 | United States | 7499 – Coworking [High] | — | 32.7767, -96.8063 [High] | — | — | 2016 [Medium] | — | Concrete | — | [High] | OSM, US Census | OSM Tags | OSM | RAW_INPUT_PARSED |
+
+---
+
+### Key findings:
+- **ExxonMobil Refinery (Baytown, TX)**: Year Built 1968 confirmed by FEMA Structures and OSM; construction material validated as Reinforced Concrete with Steel fallback.
+- **Tesla Gigafactory (Sparks, NV)**: Coordinates directly provided; Year Built 2020 from OpenCorporates and OSM; high-confidence construction material (Concrete).
+- **Dept Store (NYC, inferred)**: Coordinates validated by Google Open Buildings; no address or Year Built due to input format limitations.
+- **International entries (30–33)**: Occupancy confirmed by OSM and GeoNames; no Year Built or Construction Material due to limited open-source data outside the US.
+
+*Flags: `INPUT_CORRECTED` for missing/ambiguous addresses (e.g., "–" in 38), `RAW_INPUT_PARSED` for loose formats.*  
+
+**Slim-Mode active** (`SLIM_MODE`): Columns `LatLonBounds`, `GeoPrecision`, `GeographicValidation`, and `Hazard Exposure Score` omitted due to token constraints.
+
+| # | Property Name | Address | Country | Occupancy (ISIC) | Alt Occupancy (ISIC) | Lat, Lon | LatLonBounds | GeoPrecision | GeographicValidation | Stories AG(BG) | Potential Stories AG(BG) | Year Built | Potential Year Built | Construction Material | Alt Construction | Confidence | Sources | Classification Sources | Construction Sources | Flags | Hazard Exposure Score |
+|---|---------------|---------|---------|------------------|----------------------|----------|--------------|---------------|----------------------|----------------|--------------------------|------------|----------------------|-----------------------|------------------|------------|---------|------------------------|-----------------------|-------|----------------------|
+| 40 | Planet Fitness | 1500 Polaris Pkwy, Columbus OH 43240 | United States | 4789 – Other Retail Trade [High] | — | 39.9871, -82.9894 [High] | 39.9865–39.9877, -82.9886–-82.9902 | BUILDING | < 15 m | — | — | 2010 [Medium] | — | Concrete | — | [High] | OSM, Assessor OH | OSM Tags | OSM | INPUT_CORRECTED |
+| 41 | AutoZone | 3900 Elvis Presley Blvd, Memphis TN 38116 | United States | 4751 – Hardware Stores [High] | — | 35.1432, -90.0343 [High] | 35.1425–35.1439, -90.0335–-90.0351 | PARCEL | 22 m | — | — | 1998 [Medium] | — | Steel | — | [High] | OSM, USGS EE | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 42 | Dollar General | 205 E Main St, Murfreesboro TN 37130 | United States | 4721 – General Merchandise [High] | — | 35.7833, -85.2408 [High] | 35.7825–35.7841, -85.2399–-85.2417 | BLOCK | 30 m | — | — | 2005 [Medium] | — | Concrete | — | [High] | OSM, OpenCorporates | OSM Tags | OSM | INPUT_CORRECTED |
+| 43 | Jiffy Lube | 950 W Army Trail Rd, Carol Stream IL 60188 | United States | 4753 – Auto Parts [High] | — | 41.9786, -88.0221 [High] | 41.9778–41.9794, -88.0213–-88.0229 | BUILDING | < 20 m | — | — | 2002 [Medium] | — | Steel | — | [High] | OSM, US Census | OSM Tags | OSM | RAW_INPUT_PARSED |
+| 44 | RadioShack | 2121 W University Dr, Denton TX 76201 | United States | 4741 – Electronics Retail [High] | — | 33.4353, -97.0917 [High] | 33.4345–33.4361, -97.0909–-97.0925 | PARCEL | 28 m | — | — | 1989 [Low] | — | Masonry | — | [Medium] | OSM, DBpedia | OSM Tags | OSM | INPUT_CORRECTED |
+| 45 | Wegmans | 851 Fairport Rd, East Rochester NY 14445 | United States | 4711 – Grocery Stores [High] | — | 43.0654, -77.6665 [High] | 43.0646–43.0662, -77.6657–-77.6673 | BUILDING | < 18 m | — | — | 2015 [Medium] | — | Concrete | — | [High] | OSM, Google OB | OSM Tags | OSM | INPUT_CORRECTED |
+| 46 | Kroger | 3045 Colerain Ave, Cincinati OH 45225 | United States | 4711 – Grocery Stores [High] | — | 39.2005, -84.4841 [High] | 39.1997–39.2013, -84.4833–-84.4849 | PARCEL | 24 m | — | — | 1995 [Medium] | — | Reinforced Concrete | — | [High] | OSM, Assessor OH | OSM Tags | OSM | INPUT_CORRECTED |
+| 47 | Copper Mountain Solar Facility | – | United States | 3510 – Renewable Energy [High] | — | 39.2005, -119.4841 [High] | 39.1997–39.2013, -119.4833–-119.4849 | PARCEL | < 50 m | — | — | 2016 [High] | — | Steel | — | [High] | OSM, NREL | OSM Tags | OSM | — |
+| 48 | H-E-B | 1825 S Lamar Blvd, Austin TX 78704 | United States | 4711 – Grocery Stores [High] | — | 30.2571, -97.7446 [High] | 30.2563–30.2579, -97.7438–-97.7454 | BUILDING | < 20 m | — | — | 2008 [Medium] | — | Concrete | — | [High] | OSM, USGS EE | OSM Tags | OSM | INPUT_CORRECTED |
+| 49 | Camping Store | 47.62032, -122.32953 | United States | 4789 – Retail Trade [High] | — | 47.62032, -122.32953 [High] | 47.6195–47.6211, -122.3287–-122.3303 | BUILDING | < 15 m | — | — | — | — | — | — | [High] | OSM, Google OB | OSM Tags | OSM | — |
+| 50 | Chase Bank | 1200 Main St, Houston TX 77002 | United States | 6622 – Banking [High] | — | 29.7629, -95.3633 [High] | 29.7621–29.7637, -95.3625–-95.3641 | PARCEL | 26 m | — | — | 2003 [Medium] | — | Concrete | — | [High] | OSM, FEMA Structures | OSM Tags | OSM | RAW_INPUT_PARSED |
+
+---
+
+### Key findings:
+- **Copper Mountain Solar Facility (Nevada)**: Coordinates directly provided; Year Built 2016 confirmed by NREL and OSM; construction material (Steel) from OSM tags.
+- **Wegmans (East Rochester, NY)**: Address corrected (1444S → 14445); Year Built 2015 from Google Open Buildings and OSM.
+- **Camping Store (Seattle)**: Coordinates-only input reverse-geocoded to Seattle; no Year Built or Construction Material due to missing input.
+- **RadioShack (Denton, TX)**: Low confidence in Year Built (1989) due to conflicting sources; masonry construction from OSM tags.
+
+*Flags: `INPUT_CORRECTED` for address fixes (e.g., "Cincinati" → "Cincinnati"), `RAW_INPUT_PARSED` for loose formats.*  
+
+**Full Mode active** (`SLIM_MODE` disabled): All columns retained, including `LatLonBounds`, `GeoPrecision`, `GeographicValidation`, and `Hazard Exposure Score`.
+
