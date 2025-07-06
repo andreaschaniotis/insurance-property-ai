@@ -1,3 +1,7 @@
+![GitHub stars](https://img.shields.io/github/stars/YourUsername/insurance-property-ai?style=social)
+![GitHub forks](https://img.shields.io/github/forks/YourUsername/insurance-property-ai?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/YourUsername/insurance-property-ai?style=social)
+![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)
 # Insurance Property Location Risk Classification System v7.7
 
 **Production-Grade Prompt System for Property Intelligence**  
